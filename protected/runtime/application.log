@@ -1,0 +1,309 @@
+2012/11/01 23:37:57 [error] [exception.CException] exception 'CException' with message 'Node has an invalid validation rule. The rule must specify attributes to be validated and the validator name.' in Z:\home\wi-fi\www\yii\framework\base\CModel.php:287
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\base\CModel.php(259): CModel->createValidators()
+#1 Z:\home\wi-fi\www\yii\framework\base\CModel.php(302): CModel->getValidators('hostname')
+#2 Z:\home\wi-fi\www\yii\framework\web\helpers\CHtml.php(1197): CModel->isAttributeRequired('hostname')
+#3 Z:\home\wi-fi\www\yii\framework\web\widgets\CActiveForm.php(563): CHtml::activeLabelEx(Object(Node), 'hostname', Array)
+#4 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInput.php(245): CActiveForm->labelEx(Object(Node), 'hostname', Array)
+#5 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInputVertical.php(140): TbInput->getLabel()
+#6 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInput.php(222): TbInputVertical->textField()
+#7 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(174): TbInput->run()
+#8 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#9 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\TbActiveForm.php(186): TbActiveForm->inputRow('textfield', Object(Node), 'hostname', NULL, Array)
+#10 Z:\home\wi-fi\www\protected\views\node\_form.php(10): TbActiveForm->textFieldRow(Object(Node), 'hostname', Array)
+#11 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require('Z:\home\wi-fi\w...')
+#12 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\wi-fi\w...', Array, true)
+#13 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\wi-fi\w...', Array, true)
+#14 Z:\home\wi-fi\www\protected\views\node\create.php(15): CController->renderPartial('_form', Array)
+#15 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require('Z:\home\wi-fi\w...')
+#16 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\wi-fi\w...', Array, true)
+#17 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\wi-fi\w...', Array, true)
+#18 Z:\home\wi-fi\www\yii\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#19 Z:\home\wi-fi\www\protected\controllers\NodeController.php(78): CController->render('create', Array)
+#20 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): NodeController->actionCreate()
+#21 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#22 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#24 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#25 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#26 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#28 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('create')
+#30 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/create')
+#31 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#32 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/index.php?r=node/create
+---
+2012/11/01 23:37:58 [error] [exception.CException] exception 'CException' with message 'Node has an invalid validation rule. The rule must specify attributes to be validated and the validator name.' in Z:\home\wi-fi\www\yii\framework\base\CModel.php:287
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\base\CModel.php(259): CModel->createValidators()
+#1 Z:\home\wi-fi\www\yii\framework\base\CModel.php(302): CModel->getValidators('hostname')
+#2 Z:\home\wi-fi\www\yii\framework\web\helpers\CHtml.php(1197): CModel->isAttributeRequired('hostname')
+#3 Z:\home\wi-fi\www\yii\framework\web\widgets\CActiveForm.php(563): CHtml::activeLabelEx(Object(Node), 'hostname', Array)
+#4 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInput.php(245): CActiveForm->labelEx(Object(Node), 'hostname', Array)
+#5 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInputVertical.php(140): TbInput->getLabel()
+#6 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInput.php(222): TbInputVertical->textField()
+#7 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(174): TbInput->run()
+#8 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#9 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\TbActiveForm.php(186): TbActiveForm->inputRow('textfield', Object(Node), 'hostname', NULL, Array)
+#10 Z:\home\wi-fi\www\protected\views\node\_form.php(10): TbActiveForm->textFieldRow(Object(Node), 'hostname', Array)
+#11 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require('Z:\home\wi-fi\w...')
+#12 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\wi-fi\w...', Array, true)
+#13 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\wi-fi\w...', Array, true)
+#14 Z:\home\wi-fi\www\protected\views\node\create.php(15): CController->renderPartial('_form', Array)
+#15 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require('Z:\home\wi-fi\w...')
+#16 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\wi-fi\w...', Array, true)
+#17 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\wi-fi\w...', Array, true)
+#18 Z:\home\wi-fi\www\yii\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#19 Z:\home\wi-fi\www\protected\controllers\NodeController.php(78): CController->render('create', Array)
+#20 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): NodeController->actionCreate()
+#21 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#22 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#24 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#25 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#26 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#28 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('create')
+#30 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/create')
+#31 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#32 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/index.php?r=node/create
+HTTP_REFERER=http://wi-fi/index.php?r=node/create
+---
+2012/11/02 16:46:10 [error] [php] Invalid argument supplied for foreach() (Z:\home\wi-fi\www\yii\framework\web\helpers\CHtml.php:1960)
+Stack trace:
+#0 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInputVertical.php(60): TbActiveForm->dropDownList()
+#1 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInput.php(194): TbInputVertical->dropDownList()
+#2 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(174): TbInputVertical->run()
+#3 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): NodeController->widget()
+#4 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\TbActiveForm.php(112): TbActiveForm->inputRow()
+#5 Z:\home\wi-fi\www\protected\views\node\_form.php(36): TbActiveForm->dropDownListRow()
+#6 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require()
+#7 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): NodeController->renderInternal()
+#8 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): NodeController->renderFile()
+#9 Z:\home\wi-fi\www\protected\views\node\create.php(15): NodeController->renderPartial()
+#10 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require()
+#11 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): NodeController->renderInternal()
+#12 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): NodeController->renderFile()
+#13 Z:\home\wi-fi\www\yii\framework\web\CController.php(783): NodeController->renderPartial()
+#14 Z:\home\wi-fi\www\protected\controllers\NodeController.php(78): NodeController->render()
+#15 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): NodeController->actionCreate()
+#16 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#17 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): NodeController->runAction()
+#18 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#19 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#20 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): NodeController->filterAccessControl()
+#21 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#22 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#23 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): NodeController->runActionWithFilters()
+#24 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): NodeController->run()
+#25 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#26 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 Z:\home\wi-fi\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=node/create
+in Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInputVertical.php (60)
+in Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInput.php (194)
+in Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\TbActiveForm.php (497)
+2012/11/02 16:46:11 [error] [php] Invalid argument supplied for foreach() (Z:\home\wi-fi\www\yii\framework\web\helpers\CHtml.php:1960)
+Stack trace:
+#0 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInputVertical.php(60): TbActiveForm->dropDownList()
+#1 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInput.php(194): TbInputVertical->dropDownList()
+#2 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(174): TbInputVertical->run()
+#3 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): NodeController->widget()
+#4 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\TbActiveForm.php(112): TbActiveForm->inputRow()
+#5 Z:\home\wi-fi\www\protected\views\node\_form.php(36): TbActiveForm->dropDownListRow()
+#6 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require()
+#7 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): NodeController->renderInternal()
+#8 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): NodeController->renderFile()
+#9 Z:\home\wi-fi\www\protected\views\node\create.php(15): NodeController->renderPartial()
+#10 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require()
+#11 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): NodeController->renderInternal()
+#12 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): NodeController->renderFile()
+#13 Z:\home\wi-fi\www\yii\framework\web\CController.php(783): NodeController->renderPartial()
+#14 Z:\home\wi-fi\www\protected\controllers\NodeController.php(78): NodeController->render()
+#15 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): NodeController->actionCreate()
+#16 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#17 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): NodeController->runAction()
+#18 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#19 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#20 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): NodeController->filterAccessControl()
+#21 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#22 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#23 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): NodeController->runActionWithFilters()
+#24 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): NodeController->run()
+#25 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#26 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 Z:\home\wi-fi\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=node/create
+in Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInputVertical.php (60)
+in Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInput.php (194)
+in Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\TbActiveForm.php (497)
+2012/11/02 16:56:26 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`wi-fi`.`node`, CONSTRAINT `Ref_12` FOREIGN KEY (`status`) REFERENCES `node_status` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `node` (`hostname`, `serial`, `mac_wifi`, `mac_lte`, `inet_type`, `ip_address`, `fw_version`, `country`, `region`, `city`, `area`, `district`, `status`, `group`, `geo_lat`, `geo_long`, `setup_address`, `setup_place`, `setup_contact`, `setup_tel`, `activated`, `setup_by`, `setup_date`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22).
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/11/02 16:56:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`wi-fi`.`node`, CONSTRAINT `Ref_12` FOREIGN KEY (`status`) REFERENCES `node_status` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `node` (`hostname`, `serial`, `mac_wifi`, `mac_lte`, `inet_type`, `ip_address`, `fw_version`, `country`, `region`, `city`, `area`, `district`, `status`, `group`, `geo_lat`, `geo_long`, `setup_address`, `setup_place`, `setup_contact`, `setup_tel`, `activated`, `setup_by`, `setup_date`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22)' in Z:\home\wi-fi\www\yii\framework\db\CDbCommand.php:354
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(1017): CDbCommand->execute()
+#1 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(796): CActiveRecord->insert(NULL)
+#2 Z:\home\wi-fi\www\protected\controllers\NodeController.php(72): CActiveRecord->save()
+#3 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): NodeController->actionCreate()
+#4 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('create')
+#13 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/create')
+#14 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=node/create
+HTTP_REFERER=http://wi-fi/index.php?r=node/create
+---
+2012/11/02 22:41:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "selectCountry".' in Z:\home\wi-fi\www\yii\framework\web\CController.php:484
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CController.php(271): CController->missingAction('selectCountry')
+#1 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('selectCountry')
+#2 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/selectCoun...')
+#3 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=node/selectCountry
+HTTP_REFERER=http://wi-fi/index.php?r=node/create
+---
+2012/11/02 22:43:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "selectCountry".' in Z:\home\wi-fi\www\yii\framework\web\CController.php:484
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CController.php(271): CController->missingAction('selectCountry')
+#1 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('selectCountry')
+#2 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/selectCoun...')
+#3 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=node/selectCountry
+HTTP_REFERER=http://wi-fi/index.php?r=node/create
+---
+2012/11/02 22:47:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "selectCountry".' in Z:\home\wi-fi\www\yii\framework\web\CController.php:484
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CController.php(271): CController->missingAction('selectCountry')
+#1 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('selectCountry')
+#2 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/selectCoun...')
+#3 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=node/selectCountry
+HTTP_REFERER=http://wi-fi/index.php?r=node/create
+---
+2012/11/03 15:51:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mode".' in Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('mode')
+#1 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=mode
+---
+2012/11/08 23:17:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getSatrtPage".' in Z:\home\wi-fi\www\yii\framework\web\CController.php:484
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CController.php(271): CController->missingAction('getSatrtPage')
+#1 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('getSatrtPage')
+#2 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/getSatrtPa...')
+#3 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=node/getSatrtPage
+---
+2012/11/08 23:18:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getSatrtPage".' in Z:\home\wi-fi\www\yii\framework\web\CController.php:484
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CController.php(271): CController->missingAction('getSatrtPage')
+#1 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('getSatrtPage')
+#2 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/getSatrtPa...')
+#3 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=node/getSatrtPage
+---
+2012/11/08 23:18:13 [error] [exception.CException] exception 'CException' with message 'NodeController cannot find the requested view "start_page".' in Z:\home\wi-fi\www\yii\framework\web\CController.php:879
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CController.php(783): CController->renderPartial('start_page', NULL, true)
+#1 Z:\home\wi-fi\www\protected\controllers\NodeController.php(130): CController->render('start_page')
+#2 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): NodeController->actionGetStartPage()
+#3 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#10 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('getStartPage')
+#12 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/getStartPa...')
+#13 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=node/getStartPage
+---
+2012/11/10 00:00:35 [error] [php] Content::getNewContent() [<a href='content.getnewcontent'>content.getnewcontent</a>]: Cannot add element Value number 3 when only 1 such elements exist (Z:\home\wi-fi\www\protected\models\Content.php:111)
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): ContentController->runAction()
+#2 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): ContentController->filterAccessControl()
+#5 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): ContentController->runActionWithFilters()
+#8 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): ContentController->run()
+#9 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#10 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 Z:\home\wi-fi\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=content/refreshcontent
+in Z:\home\wi-fi\www\protected\models\Content.php (111)
+in Z:\home\wi-fi\www\protected\controllers\ContentController.php (174)
+in Z:\home\wi-fi\www\index.php (13)
+2012/11/12 22:51:58 [error] [exception.CException] exception 'CException' with message 'AdvcompController cannot find the requested view "chosePoints".' in Z:\home\wi-fi\www\yii\framework\web\CController.php:879
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CController.php(783): CController->renderPartial('chosePoints', Array, true)
+#1 Z:\home\wi-fi\www\protected\controllers\AdvcompController.php(75): CController->render('chosePoints', Array)
+#2 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): AdvcompController->actionaddStep1()
+#3 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#10 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('addStep1')
+#12 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('advcomp/addStep...')
+#13 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=advcomp/addStep1
+---
+2012/11/12 22:53:05 [error] [exception.CException] exception 'CException' with message 'AdvcompController cannot find the requested view "chosePoints".' in Z:\home\wi-fi\www\yii\framework\web\CController.php:879
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CController.php(783): CController->renderPartial('chosePoints', Array, true)
+#1 Z:\home\wi-fi\www\protected\controllers\AdvcompController.php(70): CController->render('chosePoints', Array)
+#2 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): AdvcompController->actionaddStep1()
+#3 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#10 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('addStep1')
+#12 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('advcomp/addStep...')
+#13 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=advcomp/addStep1
+---

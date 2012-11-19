@@ -1,0 +1,85 @@
+html, body {min-width: 900px;}
+.wrapper{
+    margin: 0 auto;
+    min-width: 900px;
+    max-width: 900px;
+    background-color: whitesmoke;
+    box-shadow: #333 0 0 15px;
+    min-height: 600px;
+    position: relative;
+    padding-bottom: 42px;
+}
+
+.footer{
+    min-height: 30px;
+    border-top: 2px solid silver;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.banner{text-align: center;}
+
+.banner img {
+    width: 728px;
+    height: 90px;
+    margin: 20px 0;
+}
+.content-border {
+    border-radius: 4px;
+}
+
+
+.cenz
+{
+    float: right;
+    margin-right: 30px;
+    color: red;
+    font-size: 200%;
+}
+.content
+{   
+    margin: 10px 24px;
+}
+.column
+{
+    width: 270px;
+    margin-right: 2px;
+    float: left;
+    min-height: 180px;
+    padding: 5px;
+    overflow: hidden;
+    max-height: 200px;
+    text-align: center;
+}
+
+.separator{
+    float: left;
+    min-height: 160px;
+    background-color: gray;
+    border-radius: 1px;
+    min-width: 2px;
+    margin: 5px 0;
+    padding-bottom: 30px;
+}
+.column p {text-align: justify;}
+
+.navbar ul li {
+    padding: 0 20px;
+    
+}
+.navbar a{
+    font-size: 1.35em;
+}
+.enterform
+{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
