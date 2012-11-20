@@ -307,3 +307,48 @@ Stack trace:
 #15 {main}
 REQUEST_URI=/index.php?r=advcomp/addStep1
 ---
+2012/11/20 16:07:09 [error] [exception.CDbException] exception 'CDbException' with message 'The table "node" for active record class "Node" cannot be found in the database.' in Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php:2312
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Node))
+#1 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(403): CActiveRecord::model('Node')
+#2 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 Z:\home\wi-fi\www\protected\controllers\NodeController.php(58): CActiveRecord->__construct()
+#4 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): NodeController->actionCreate()
+#5 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('create')
+#14 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/create')
+#15 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=node/create
+---
+2012/11/20 16:07:10 [error] [exception.CDbException] exception 'CDbException' with message 'The table "node" for active record class "Node" cannot be found in the database.' in Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php:2312
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Node))
+#1 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(403): CActiveRecord::model('Node')
+#2 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 Z:\home\wi-fi\www\protected\controllers\NodeController.php(58): CActiveRecord->__construct()
+#4 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): NodeController->actionCreate()
+#5 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('create')
+#14 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/create')
+#15 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=node/create
+HTTP_REFERER=http://wi-fi/index.php?r=node/create
+---
