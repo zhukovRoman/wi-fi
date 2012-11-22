@@ -22,10 +22,10 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
 <?php echo $form->textFieldRow($model, 'ip_address', array('class' => 'span5', 'maxlength' => 11)); ?>
 
-<?php echo $form->textFieldRow($model, 'fw_version', array('class' => 'span5', 'maxlength' => 10)); ?>
+<?php echo $form->textFieldRow($model, 'fw_version', array('class' => 'span5', 'maxlength' => 10,)); ?>
 
 <hr>
-
+<!--
 <?php echo $form->dropDownListRow($model, 'country', Country::getDropDrownItems(), array('class' => 'span5')); ?>
 
 <div id="dropDownRegion" style="display: blcok;">
@@ -34,7 +34,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
 <div id="dropDownCity" style="display: block;">
     <?php echo $form->dropDownListRow($model, 'city', City::getDropDrownItems(), array('class' => 'span5')); ?>
-</div>
+</div>-->
 
 
 <div id="dropDownArea" style="display: block;">
@@ -106,7 +106,38 @@ if (!$model->isNewRecord) {
 
 <?php echo $form->textFieldRow($model, 'setup_date', array('class' => 'span5')); ?>
 
+<HR>
 
+<?php 
+$this->widget('zii.widgets.jui.CJuiSortable', array(
+      'items'=>array(
+          'id1'=>'Item 1',
+          'id2'=>'Item 2',
+          'id3'=>'Item 3',
+      ),
+      // additional javascript options for the JUI Sortable plugin
+      'options'=>array(
+          'delay'=>'300',
+          'connectWith'=> "#allItems",
+          
+      ),
+      'htmlOptions'=>array('id'=>'selectedItems'),
+  ));
+$this->widget('zii.widgets.jui.CJuiSortable', array(
+      'items'=>array(
+          'id1'=>'Item 4',
+          'id2'=>'Item 5',
+          'id3'=>'Item 6',
+      ),
+      // additional javascript options for the JUI Sortable plugin
+      'options'=>array(
+          'delay'=>'300',
+          'connectWith'=> "#selectedItems",
+          
+      ),
+      'htmlOptions'=>array('id'=>'allItems'),
+  ));
+?>
 
 <div class="form-actions">
     <?php

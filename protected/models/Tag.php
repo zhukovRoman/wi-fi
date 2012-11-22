@@ -1,23 +1,21 @@
 <?php
 
 /**
- * This is the model class for table "district".
+ * This is the model class for table "tag".
  *
- * The followings are the available columns in table 'district':
+ * The followings are the available columns in table 'tag':
  * @property integer $id
- * @property string $name
- * @property integer $area_id
+ * @property string $text
  *
  * The followings are the available model relations:
- * @property Area $area
- * @property Node[] $nodes
+ * @property NodeTag[] $nodeTags
  */
-class District extends CActiveRecord
+class Tag extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return District the static model class
+	 * @return Tag the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -29,7 +27,7 @@ class District extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'district';
+		return 'tag';
 	}
 
 	/**
@@ -40,12 +38,10 @@ class District extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, area_id', 'required'),
-			array('area_id', 'numerical', 'integerOnly'=>true),
-			array('name', 'length', 'max'=>50),
+			array('text', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, area_id', 'safe', 'on'=>'search'),
+			array('id, text', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -57,8 +53,7 @@ class District extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'area' => array(self::BELONGS_TO, 'Area', 'area_id'),
-			'nodes' => array(self::HAS_MANY, 'Node', 'district'),
+			'nodeTags' => array(self::HAS_MANY, 'NodeTag', 'tag_id'),
 		);
 	}
 
@@ -69,8 +64,7 @@ class District extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'area_id' => 'Area',
+			'text' => 'Text',
 		);
 	}
 
@@ -86,22 +80,10 @@ class District extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('area_id',$this->area_id);
+		$criteria->compare('text',$this->text,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
-        
-        public static function getDropDrownItems() {
-        $all = District::model()->findAll();
-        $res = array();
-        $res = array('0'=>'--Выберете район--');
-        foreach ($all as $i) {
-            $res[$i->id] = $i->name;
-        }
-        return array();
-        //return $res;
-    }
 }

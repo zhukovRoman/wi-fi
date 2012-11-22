@@ -23,7 +23,7 @@ class NodeController extends Controller {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('index', 'view', 'SelectCountry','GetStartPage'),
+                'actions' => array('index', 'view', 'SelectCountry','GetStartPage','SelectArea'),
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -61,6 +61,14 @@ class NodeController extends Controller {
         // $this->performAjaxValidation($model);
 
         if (isset($_POST['Node'])) {
+            
+            // зададим город регион и страну по умлочанию
+            $city = City::model()->findByPk(1);
+            $model->city= $city->id;
+            $model->region = $city->region_id;
+            $model->country = 1;
+            
+            
             $model->attributes = $_POST['Node'];
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->id));
@@ -171,10 +179,29 @@ class NodeController extends Controller {
         }
     }
 
+    public function actionSelectArea() {
+        if (isset($_POST['select'])) {
+
+            $current = intval($_POST['select']);
+//            echo $current;
+//            die();
+            $districts = District::model()->findAll('area_id=:area',
+                                            array(':area'=>$current));
+            $html = "<option value='0'>-- Выберете округ --</option>";
+            foreach ($districts as $dis) {
+                $html .= "<option value='$dis->id'>$dis->name</option>";
+            }
+
+            echo json_encode(array('count' => count($districts),
+                'html' => $html));
+        }
+    }
+    
     public function actionSelectCountry() {
         if (isset($_POST['select'])) {
 
             $current = intval($_POST['select']);
+            
             $regions = Region::model()->findAll();
             $html = "<option value='0'>-- Выберете край --</option>";
             foreach ($regions as $reg) {

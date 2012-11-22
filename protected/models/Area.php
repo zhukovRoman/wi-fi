@@ -98,6 +98,7 @@ class Area extends CActiveRecord
         public static function getDropDrownItems() {
         $all = Area::model()->findAll();
         $res = array();
+        $res = array('0'=>'--Выберете округ--');
         foreach ($all as $i) {
             $res[$i->id] = $i->name;
         }

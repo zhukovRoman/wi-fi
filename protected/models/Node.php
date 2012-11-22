@@ -38,6 +38,7 @@
  * @property NodeGroup $group0
  * @property InetType $inetType
  * @property NodeStatus $status0
+ * @property NodeTag[] $nodeTags
  */
 class Node extends CActiveRecord {
 
@@ -70,12 +71,13 @@ class Node extends CActiveRecord {
             array('inet_type, country, region, city, area, district, status, group, setup_by', 'numerical', 'integerOnly' => true),
             array('geo_lat, geo_long', 'numerical'),
             array('hostname, serial, mac_wifi, mac_lte, setup_address, setup_place, setup_contact, setup_tel', 'length', 'max' => 50),
-            array('ip_address', 'length', 'max' => 11),
+            array('ip_address', 'length', 'max' => 15),
             array('fw_version', 'length', 'max' => 10),
             array('setup_date, activated', 'safe'),
+            array ('ip_address','unique'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, hostname, serial, mac_wifi, mac_lte, inet_type, country, region, city, area, district, status, group, setup_by, setup_date, setup_address, setup_place, setup_contact, setup_tel, activated, ip_address, fw_version, geo_lat, geo_long', 'safe', 'on' => 'search'),
+            //array('id, hostname, serial, mac_wifi, mac_lte, inet_type, country, region, city, area, district, status, group, setup_by, setup_date, setup_address, setup_place, setup_contact, setup_tel, activated, ip_address, fw_version, geo_lat, geo_long', 'safe', 'on' => 'search'),
         );
     }
 
@@ -95,6 +97,7 @@ class Node extends CActiveRecord {
             'group0' => array(self::BELONGS_TO, 'NodeGroup', 'group'),
             'inetType' => array(self::BELONGS_TO, 'InetType', 'inet_type'),
             'status0' => array(self::BELONGS_TO, 'NodeStatus', 'status'),
+            'nodeTags' => array(self::HAS_MANY, 'NodeTag', 'node_id'),
         );
     }
 

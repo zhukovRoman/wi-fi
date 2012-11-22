@@ -352,3 +352,120 @@ Stack trace:
 REQUEST_URI=/index.php?r=node/create
 HTTP_REFERER=http://wi-fi/index.php?r=node/create
 ---
+2012/11/22 17:20:29 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 19 node.id may not be NULL. The SQL statement executed was: INSERT INTO 'node' ("city", "region", "country", "hostname", "serial", "mac_wifi", "mac_lte", "inet_type", "ip_address", "fw_version", "area", "district", "status", "group", "geo_lat", "geo_long", "setup_address", "setup_place", "setup_contact", "setup_tel", "activated", "setup_by", "setup_date") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22).
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (73)
+in Z:\home\wi-fi\www\index.php (13)
+2012/11/22 17:20:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 19 node.id may not be NULL. The SQL statement executed was: INSERT INTO 'node' ("city", "region", "country", "hostname", "serial", "mac_wifi", "mac_lte", "inet_type", "ip_address", "fw_version", "area", "district", "status", "group", "geo_lat", "geo_long", "setup_address", "setup_place", "setup_contact", "setup_tel", "activated", "setup_by", "setup_date") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22)' in Z:\home\wi-fi\www\yii\framework\db\CDbCommand.php:354
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(1017): CDbCommand->execute()
+#1 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(796): CActiveRecord->insert(NULL)
+#2 Z:\home\wi-fi\www\protected\controllers\NodeController.php(73): CActiveRecord->save()
+#3 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): NodeController->actionCreate()
+#4 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('create')
+#13 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/create')
+#14 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=node/create
+HTTP_REFERER=http://wi-fi/index.php?r=node/create
+---
+2012/11/22 17:45:42 [error] [exception.CException] exception 'CException' with message 'Property "CUniqueValidator.0" is not defined.' in Z:\home\wi-fi\www\yii\framework\base\CComponent.php:174
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\validators\CValidator.php(190): CComponent->__set('0', 'length')
+#1 Z:\home\wi-fi\www\yii\framework\base\CModel.php(285): CValidator::createValidator('unique', Object(Node), 'ip_address', Array)
+#2 Z:\home\wi-fi\www\yii\framework\base\CModel.php(259): CModel->createValidators()
+#3 Z:\home\wi-fi\www\yii\framework\base\CModel.php(302): CModel->getValidators('hostname')
+#4 Z:\home\wi-fi\www\yii\framework\web\helpers\CHtml.php(1197): CModel->isAttributeRequired('hostname')
+#5 Z:\home\wi-fi\www\yii\framework\web\widgets\CActiveForm.php(563): CHtml::activeLabelEx(Object(Node), 'hostname', Array)
+#6 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInput.php(245): CActiveForm->labelEx(Object(Node), 'hostname', Array)
+#7 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInputVertical.php(140): TbInput->getLabel()
+#8 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInput.php(222): TbInputVertical->textField()
+#9 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(174): TbInput->run()
+#10 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#11 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\TbActiveForm.php(186): TbActiveForm->inputRow('textfield', Object(Node), 'hostname', NULL, Array)
+#12 Z:\home\wi-fi\www\protected\views\node\_form.php(13): TbActiveForm->textFieldRow(Object(Node), 'hostname', Array)
+#13 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require('Z:\home\wi-fi\w...')
+#14 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\wi-fi\w...', Array, true)
+#15 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\wi-fi\w...', Array, true)
+#16 Z:\home\wi-fi\www\protected\views\node\create.php(15): CController->renderPartial('_form', Array)
+#17 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require('Z:\home\wi-fi\w...')
+#18 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\wi-fi\w...', Array, true)
+#19 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\wi-fi\w...', Array, true)
+#20 Z:\home\wi-fi\www\yii\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#21 Z:\home\wi-fi\www\protected\controllers\NodeController.php(79): CController->render('create', Array)
+#22 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): NodeController->actionCreate()
+#23 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#24 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#25 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#26 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#27 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#28 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#29 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#30 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#31 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('create')
+#32 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/create')
+#33 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#34 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#35 {main}
+REQUEST_URI=/index.php?r=node/create
+---
+2012/11/22 17:45:42 [error] [exception.CException] exception 'CException' with message 'Property "CUniqueValidator.0" is not defined.' in Z:\home\wi-fi\www\yii\framework\base\CComponent.php:174
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\validators\CValidator.php(190): CComponent->__set('0', 'length')
+#1 Z:\home\wi-fi\www\yii\framework\base\CModel.php(285): CValidator::createValidator('unique', Object(Node), 'ip_address', Array)
+#2 Z:\home\wi-fi\www\yii\framework\base\CModel.php(259): CModel->createValidators()
+#3 Z:\home\wi-fi\www\yii\framework\base\CModel.php(302): CModel->getValidators('hostname')
+#4 Z:\home\wi-fi\www\yii\framework\web\helpers\CHtml.php(1197): CModel->isAttributeRequired('hostname')
+#5 Z:\home\wi-fi\www\yii\framework\web\widgets\CActiveForm.php(563): CHtml::activeLabelEx(Object(Node), 'hostname', Array)
+#6 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInput.php(245): CActiveForm->labelEx(Object(Node), 'hostname', Array)
+#7 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInputVertical.php(140): TbInput->getLabel()
+#8 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInput.php(222): TbInputVertical->textField()
+#9 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(174): TbInput->run()
+#10 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#11 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\TbActiveForm.php(186): TbActiveForm->inputRow('textfield', Object(Node), 'hostname', NULL, Array)
+#12 Z:\home\wi-fi\www\protected\views\node\_form.php(13): TbActiveForm->textFieldRow(Object(Node), 'hostname', Array)
+#13 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require('Z:\home\wi-fi\w...')
+#14 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\wi-fi\w...', Array, true)
+#15 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\wi-fi\w...', Array, true)
+#16 Z:\home\wi-fi\www\protected\views\node\create.php(15): CController->renderPartial('_form', Array)
+#17 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require('Z:\home\wi-fi\w...')
+#18 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\wi-fi\w...', Array, true)
+#19 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\wi-fi\w...', Array, true)
+#20 Z:\home\wi-fi\www\yii\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#21 Z:\home\wi-fi\www\protected\controllers\NodeController.php(79): CController->render('create', Array)
+#22 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): NodeController->actionCreate()
+#23 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#24 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#25 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#26 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#27 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#28 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#29 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#30 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#31 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('create')
+#32 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/create')
+#33 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#34 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#35 {main}
+REQUEST_URI=/index.php?r=node/create
+HTTP_REFERER=http://wi-fi/index.php?r=node/create
+---
+2012/11/22 17:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "selectArea".' in Z:\home\wi-fi\www\yii\framework\web\CController.php:484
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CController.php(271): CController->missingAction('selectArea')
+#1 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('selectArea')
+#2 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/selectArea')
+#3 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=node/selectArea
+HTTP_REFERER=http://wi-fi/index.php?r=node/create
+---
