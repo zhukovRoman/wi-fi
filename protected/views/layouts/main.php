@@ -8,8 +8,10 @@
 
             <?php //Yii::app()->getClientScript()->registerCoreScript('jquery', CClientScript::POS_END); ?>
             <?php Yii::app()->getClientScript()->registerScriptFile(Yii::app()->request->baseUrl . '/js/jquery.js', CClientScript::POS_HEAD); ?>
+            <?php Yii::app()->getClientScript()->registerScriptFile(Yii::app()->request->baseUrl . '/js/jquery.multi-select.js',CClientScript::POS_HEAD); ?>
             <?php Yii::app()->getClientScript()->registerScriptFile(Yii::app()->request->baseUrl . '/js/bootstrap.js', CClientScript::POS_END); ?>
-             
+            
+
             
             <!--<script src="http://cdn.leafletjs.com/leaflet-0.4/leaflet.js"></script>-->
             <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.css" />

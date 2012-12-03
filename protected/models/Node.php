@@ -101,6 +101,13 @@ class Node extends CActiveRecord {
         );
     }
 
+    protected function beforeSave() {
+        parent::beforeSave();
+        $this->mac_lte = strtoupper($this->mac_lte);
+        $this->mac_wifi = strtoupper($this->mac_wifi);
+      
+    }
+
     /**
      * @return array customized attribute labels (name=>label)
      */
@@ -172,7 +179,8 @@ class Node extends CActiveRecord {
                     'criteria' => $criteria,
                 ));
     }
-
+    
+    
     
 
 }

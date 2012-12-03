@@ -86,4 +86,15 @@ class Tag extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+        
+        public function getAllOption ()
+        {
+            $tags = Tag::model()->findAll();
+            $res = "";
+            foreach ($tags as $t)
+            {
+                $res .= "<option value='$t->id'>".$t->text."</option>";
+            }
+            return $res;
+        }
 }
