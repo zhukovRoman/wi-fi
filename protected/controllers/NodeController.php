@@ -56,22 +56,26 @@ class NodeController extends Controller {
      */
     public function actionCreate() {
         $model = new Node;
-
+        $model->testfill();
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
 
         if (isset($_POST['Node'])) {
+            
             
             // зададим город регион и страну по умлочанию
             $city = City::model()->findByPk(1);
             $model->city= $city->id;
             $model->region = $city->region_id;
             $model->country = 1;
-            
-            
             $model->attributes = $_POST['Node'];
+           
             if ($model->save())
-                $this->redirect(array('view', 'id' => $model->id));
+            {
+                echo $model->id."sdfs";die();
+                if ($model->saveGroup($_POST['tags']))
+                    $this->redirect(array('view', 'id' => $model->id));
+            }
         }
        
         $this->render('create', array(

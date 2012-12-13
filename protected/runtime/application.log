@@ -469,3 +469,541 @@ Stack trace:
 REQUEST_URI=/index.php?r=node/selectArea
 HTTP_REFERER=http://wi-fi/index.php?r=node/create
 ---
+2012/12/13 23:38:22 [error] [php] Cannot modify header information - headers already sent by (output started at Z:\home\wi-fi\www\protected\models\Node.php:187) (Z:\home\wi-fi\www\yii\framework\web\CHttpRequest.php:763)
+Stack trace:
+#0 Z:\home\wi-fi\www\protected\controllers\NodeController.php(78): NodeController->redirect()
+#1 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): NodeController->actionCreate()
+#2 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): NodeController->runAction()
+#4 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#6 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): NodeController->filterAccessControl()
+#7 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#8 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#9 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): NodeController->runActionWithFilters()
+#10 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): NodeController->run()
+#11 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#12 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 Z:\home\wi-fi\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=node/create
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (78)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:11:38 [error] [exception.CException] exception 'CException' with message 'Property "Node.ip" is not defined.' in Z:\home\wi-fi\www\yii\framework\base\CComponent.php:174
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(160): CComponent->__set('ip', '123.123.123.123')
+#1 Z:\home\wi-fi\www\protected\models\Node.php(198): CActiveRecord->__set('ip', '123.123.123.123')
+#2 Z:\home\wi-fi\www\protected\controllers\NodeController.php(59): Node->testfill()
+#3 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): NodeController->actionCreate()
+#4 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('create')
+#13 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/create')
+#14 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=node/create
+---
+2012/12/14 00:37:17 [error] [php] date() expects at least 1 parameter, 0 given (Z:\home\wi-fi\www\protected\models\Node.php:206)
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): NodeController->actionCreate()
+#1 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): NodeController->runAction()
+#3 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#5 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): NodeController->filterAccessControl()
+#6 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#8 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): NodeController->runActionWithFilters()
+#9 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): NodeController->run()
+#10 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#11 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 Z:\home\wi-fi\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=node/create
+in Z:\home\wi-fi\www\protected\models\Node.php (206)
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (59)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:49:37 [error] [php] Invalid argument supplied for foreach() (Z:\home\wi-fi\www\yii\framework\base\CModel.php:282)
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\base\CModel.php(466): Node->getSafeAttributeNames()
+#1 Z:\home\wi-fi\www\yii\framework\base\CComponent.php(153): Node->setAttributes()
+#2 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(160): Node->__set()
+#3 Z:\home\wi-fi\www\protected\controllers\NodeController.php(71): Node->__set()
+#4 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): NodeController->actionCreate()
+#5 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#6 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): NodeController->runAction()
+#7 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#9 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): NodeController->filterAccessControl()
+#10 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#11 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): NodeController->runActionWithFilters()
+#13 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): NodeController->run()
+#14 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#15 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 Z:\home\wi-fi\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=node/create
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:00 [warning] [application] Failed to set unsafe attribute "hostname" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:00 [warning] [application] Failed to set unsafe attribute "serial" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:00 [warning] [application] Failed to set unsafe attribute "mac_wifi" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:00 [warning] [application] Failed to set unsafe attribute "mac_lte" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:00 [warning] [application] Failed to set unsafe attribute "inet_type" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:00 [warning] [application] Failed to set unsafe attribute "ip_address" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:00 [warning] [application] Failed to set unsafe attribute "fw_version" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:00 [warning] [application] Failed to set unsafe attribute "area" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:00 [warning] [application] Failed to set unsafe attribute "status" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:00 [warning] [application] Failed to set unsafe attribute "group" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:00 [warning] [application] Failed to set unsafe attribute "geo_lat" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:00 [warning] [application] Failed to set unsafe attribute "geo_long" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:00 [warning] [application] Failed to set unsafe attribute "setup_address" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:00 [warning] [application] Failed to set unsafe attribute "setup_place" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:00 [warning] [application] Failed to set unsafe attribute "setup_contact" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:00 [warning] [application] Failed to set unsafe attribute "setup_tel" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:00 [warning] [application] Failed to set unsafe attribute "activated" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:00 [warning] [application] Failed to set unsafe attribute "setup_by" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:00 [warning] [application] Failed to set unsafe attribute "setup_date" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:43 [warning] [application] Failed to set unsafe attribute "hostname" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:43 [warning] [application] Failed to set unsafe attribute "serial" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:43 [warning] [application] Failed to set unsafe attribute "mac_wifi" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:43 [warning] [application] Failed to set unsafe attribute "mac_lte" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:43 [warning] [application] Failed to set unsafe attribute "inet_type" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:43 [warning] [application] Failed to set unsafe attribute "ip_address" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:43 [warning] [application] Failed to set unsafe attribute "fw_version" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:43 [warning] [application] Failed to set unsafe attribute "area" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:43 [warning] [application] Failed to set unsafe attribute "district" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:43 [warning] [application] Failed to set unsafe attribute "status" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:43 [warning] [application] Failed to set unsafe attribute "group" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:43 [warning] [application] Failed to set unsafe attribute "geo_lat" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:43 [warning] [application] Failed to set unsafe attribute "geo_long" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:43 [warning] [application] Failed to set unsafe attribute "setup_address" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:43 [warning] [application] Failed to set unsafe attribute "setup_place" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:43 [warning] [application] Failed to set unsafe attribute "setup_contact" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:43 [warning] [application] Failed to set unsafe attribute "setup_tel" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:43 [warning] [application] Failed to set unsafe attribute "activated" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:43 [warning] [application] Failed to set unsafe attribute "setup_by" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:50:43 [warning] [application] Failed to set unsafe attribute "setup_date" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:53:04 [warning] [application] Failed to set unsafe attribute "hostname" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:53:04 [warning] [application] Failed to set unsafe attribute "serial" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:53:04 [warning] [application] Failed to set unsafe attribute "mac_wifi" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:53:04 [warning] [application] Failed to set unsafe attribute "mac_lte" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:53:04 [warning] [application] Failed to set unsafe attribute "inet_type" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:53:04 [warning] [application] Failed to set unsafe attribute "ip_address" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:53:04 [warning] [application] Failed to set unsafe attribute "fw_version" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:53:04 [warning] [application] Failed to set unsafe attribute "area" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:53:04 [warning] [application] Failed to set unsafe attribute "status" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:53:04 [warning] [application] Failed to set unsafe attribute "group" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:53:04 [warning] [application] Failed to set unsafe attribute "geo_lat" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:53:04 [warning] [application] Failed to set unsafe attribute "geo_long" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:53:04 [warning] [application] Failed to set unsafe attribute "setup_address" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:53:04 [warning] [application] Failed to set unsafe attribute "setup_place" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:53:04 [warning] [application] Failed to set unsafe attribute "setup_contact" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:53:04 [warning] [application] Failed to set unsafe attribute "setup_tel" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:53:04 [warning] [application] Failed to set unsafe attribute "activated" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:53:04 [warning] [application] Failed to set unsafe attribute "setup_by" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:53:04 [warning] [application] Failed to set unsafe attribute "setup_date" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:55:05 [warning] [application] Failed to set unsafe attribute "hostname" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:55:05 [warning] [application] Failed to set unsafe attribute "serial" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:55:05 [warning] [application] Failed to set unsafe attribute "mac_wifi" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:55:05 [warning] [application] Failed to set unsafe attribute "mac_lte" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:55:05 [warning] [application] Failed to set unsafe attribute "inet_type" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:55:05 [warning] [application] Failed to set unsafe attribute "ip_address" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:55:05 [warning] [application] Failed to set unsafe attribute "fw_version" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:55:05 [warning] [application] Failed to set unsafe attribute "area" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:55:05 [warning] [application] Failed to set unsafe attribute "status" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:55:05 [warning] [application] Failed to set unsafe attribute "group" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:55:05 [warning] [application] Failed to set unsafe attribute "geo_lat" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:55:05 [warning] [application] Failed to set unsafe attribute "geo_long" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:55:05 [warning] [application] Failed to set unsafe attribute "setup_address" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:55:05 [warning] [application] Failed to set unsafe attribute "setup_place" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:55:05 [warning] [application] Failed to set unsafe attribute "setup_contact" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:55:05 [warning] [application] Failed to set unsafe attribute "setup_tel" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:55:05 [warning] [application] Failed to set unsafe attribute "activated" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:55:05 [warning] [application] Failed to set unsafe attribute "setup_by" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 00:55:05 [warning] [application] Failed to set unsafe attribute "setup_date" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:00:27 [warning] [application] Failed to set unsafe attribute "hostname" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:00:27 [warning] [application] Failed to set unsafe attribute "serial" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:00:27 [warning] [application] Failed to set unsafe attribute "mac_wifi" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:00:27 [warning] [application] Failed to set unsafe attribute "mac_lte" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:00:27 [warning] [application] Failed to set unsafe attribute "inet_type" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:00:27 [warning] [application] Failed to set unsafe attribute "ip_address" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:00:27 [warning] [application] Failed to set unsafe attribute "fw_version" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:00:27 [warning] [application] Failed to set unsafe attribute "area" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:00:27 [warning] [application] Failed to set unsafe attribute "district" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:00:27 [warning] [application] Failed to set unsafe attribute "status" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:00:27 [warning] [application] Failed to set unsafe attribute "group" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:00:27 [warning] [application] Failed to set unsafe attribute "geo_lat" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:00:27 [warning] [application] Failed to set unsafe attribute "geo_long" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:00:27 [warning] [application] Failed to set unsafe attribute "setup_address" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:00:27 [warning] [application] Failed to set unsafe attribute "setup_place" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:00:27 [warning] [application] Failed to set unsafe attribute "setup_contact" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:00:27 [warning] [application] Failed to set unsafe attribute "setup_tel" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:00:27 [warning] [application] Failed to set unsafe attribute "activated" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:00:27 [warning] [application] Failed to set unsafe attribute "setup_by" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:00:27 [warning] [application] Failed to set unsafe attribute "setup_date" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:04:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "country/create".' in Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('country/create')
+#1 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=country/create
+---
+2012/12/14 01:04:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "nodetag/create".' in Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('nodetag/create')
+#1 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=nodetag/create
+---
+2012/12/14 01:04:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "nodeTag/create".' in Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('nodeTag/create')
+#1 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=nodeTag/create
+---
+2012/12/14 01:07:11 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 19 city.id may not be NULL. The SQL statement executed was: INSERT INTO 'city' ("name", "region_id") VALUES (:yp0, :yp1).
+in Z:\home\wi-fi\www\protected\controllers\CityController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:07:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 19 city.id may not be NULL. The SQL statement executed was: INSERT INTO 'city' ("name", "region_id") VALUES (:yp0, :yp1)' in Z:\home\wi-fi\www\yii\framework\db\CDbCommand.php:354
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(1017): CDbCommand->execute()
+#1 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(796): CActiveRecord->insert(NULL)
+#2 Z:\home\wi-fi\www\protected\controllers\CityController.php(72): CActiveRecord->save()
+#3 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): CityController->actionCreate()
+#4 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('create')
+#13 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('city/create')
+#14 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=city/create
+HTTP_REFERER=http://wi-fi/index.php?r=city/create
+---
+2012/12/14 01:09:47 [warning] [application] Failed to set unsafe attribute "hostname" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:09:47 [warning] [application] Failed to set unsafe attribute "serial" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:09:47 [warning] [application] Failed to set unsafe attribute "mac_wifi" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:09:47 [warning] [application] Failed to set unsafe attribute "mac_lte" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:09:47 [warning] [application] Failed to set unsafe attribute "inet_type" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:09:47 [warning] [application] Failed to set unsafe attribute "ip_address" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:09:47 [warning] [application] Failed to set unsafe attribute "fw_version" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:09:47 [warning] [application] Failed to set unsafe attribute "area" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:09:47 [warning] [application] Failed to set unsafe attribute "status" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:09:47 [warning] [application] Failed to set unsafe attribute "group" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:09:47 [warning] [application] Failed to set unsafe attribute "geo_lat" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:09:47 [warning] [application] Failed to set unsafe attribute "geo_long" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:09:47 [warning] [application] Failed to set unsafe attribute "setup_address" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:09:47 [warning] [application] Failed to set unsafe attribute "setup_place" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:09:47 [warning] [application] Failed to set unsafe attribute "setup_contact" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:09:47 [warning] [application] Failed to set unsafe attribute "setup_tel" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:09:47 [warning] [application] Failed to set unsafe attribute "activated" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:09:47 [warning] [application] Failed to set unsafe attribute "setup_by" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:09:47 [warning] [application] Failed to set unsafe attribute "setup_date" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:23:29 [warning] [application] Failed to set unsafe attribute "hostname" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:23:29 [warning] [application] Failed to set unsafe attribute "serial" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:23:29 [warning] [application] Failed to set unsafe attribute "mac_wifi" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:23:29 [warning] [application] Failed to set unsafe attribute "mac_lte" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:23:29 [warning] [application] Failed to set unsafe attribute "inet_type" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:23:29 [warning] [application] Failed to set unsafe attribute "ip_address" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:23:29 [warning] [application] Failed to set unsafe attribute "fw_version" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:23:29 [warning] [application] Failed to set unsafe attribute "area" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:23:29 [warning] [application] Failed to set unsafe attribute "district" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:23:29 [warning] [application] Failed to set unsafe attribute "status" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:23:29 [warning] [application] Failed to set unsafe attribute "group" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:23:29 [warning] [application] Failed to set unsafe attribute "geo_lat" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:23:29 [warning] [application] Failed to set unsafe attribute "geo_long" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:23:29 [warning] [application] Failed to set unsafe attribute "setup_address" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:23:29 [warning] [application] Failed to set unsafe attribute "setup_place" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:23:29 [warning] [application] Failed to set unsafe attribute "setup_contact" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:23:29 [warning] [application] Failed to set unsafe attribute "setup_tel" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:23:29 [warning] [application] Failed to set unsafe attribute "activated" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:23:29 [warning] [application] Failed to set unsafe attribute "setup_by" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:23:29 [warning] [application] Failed to set unsafe attribute "setup_date" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
+in Z:\home\wi-fi\www\index.php (13)
