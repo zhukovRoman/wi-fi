@@ -38,9 +38,10 @@
  * @property NodeGroup $group0
  * @property InetType $inetType
  * @property NodeStatus $status0
- * @property NodeTag[] $nodeTags
  */
 class Node extends CActiveRecord {
+
+    
 
     /**
      * Returns the static model of the specified AR class.
@@ -64,17 +65,17 @@ class Node extends CActiveRecord {
     public function rules() {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
-     return array(
-//            array('inet_type, country, region, city, area, district, status, group, setup_by', 'numerical', 'integerOnly' => true),
-//            array('geo_lat, geo_long', 'numerical'),
-//            array('hostname, serial, mac_wifi, mac_lte, setup_address, setup_place, setup_contact, setup_tel', 'length', 'max' => 50),
-//            array('ip_address', 'length', 'max' => 15),
-//            array('fw_version', 'length', 'max' => 10),
-//            array('setup_date, activated', 'safe'),
-//            //array('ip_address', 'unique'),
-//                // The following rule is used by search().
-//                // Please remove those attributes that should not be searched.
-//                //array('id, hostname, serial, mac_wifi, mac_lte, inet_type, country, region, city, area, district, status, group, setup_by, setup_date, setup_address, setup_place, setup_contact, setup_tel, activated, ip_address, fw_version, geo_lat, geo_long', 'safe', 'on' => 'search'),
+        return array(
+            
+            array('inet_type, country, region, city, area, district, status, group, setup_by', 'numerical', 'integerOnly' => true),
+            array('geo_lat, geo_long', 'numerical'),
+            array('hostname, serial, mac_wifi, mac_lte, setup_address, setup_place, setup_contact, setup_tel', 'length', 'max' => 50),
+            array('ip_address', 'length', 'max' => 11),
+            array('fw_version', 'length', 'max' => 10),
+            array('setup_date, activated', 'safe'),
+            // The following rule is used by search().
+            // Please remove those attributes that should not be searched.
+            array('id, hostname, serial, mac_wifi, mac_lte, inet_type, country, region, city, area, district, status, group, setup_by, setup_date, setup_address, setup_place, setup_contact, setup_tel, activated, ip_address, fw_version, geo_lat, geo_long', 'safe', 'on' => 'search'),
         );
     }
 
@@ -94,14 +95,7 @@ class Node extends CActiveRecord {
             'group0' => array(self::BELONGS_TO, 'NodeGroup', 'group'),
             'inetType' => array(self::BELONGS_TO, 'InetType', 'inet_type'),
             'status0' => array(self::BELONGS_TO, 'NodeStatus', 'status'),
-            'nodeTags' => array(self::HAS_MANY, 'NodeTag', 'node_id'),
         );
-    }
-
-    protected function beforeSave() {
-        parent::beforeSave();
-        $this->mac_lte = strtoupper($this->mac_lte);
-        $this->mac_wifi = strtoupper($this->mac_wifi);
     }
 
     /**
@@ -176,38 +170,6 @@ class Node extends CActiveRecord {
                 ));
     }
 
-    public function saveGroup($groups) {
-        foreach ($groups as $g) {
-            $toSave = new NodeTag();
-            $toSave->tag_id = $g;
-            $toSave->node_id = $this->id;
-            if (!$toSave->save())
-                return false;
-        }
-        return true;
-    }
-
-    public function testfill() {
-
-        $this->hostname = "точка" . date("his");
-        $this->fw_version = "1.1";
-        $this->mac_lte = "00-00-00-00-00";
-        $this->mac_wifi = "00-00-00-00-01";
-        $this->serial = "123-123-123";
-        $this->geo_lat = 55.7 + (rand(0, 10) / 1000);
-        $this->geo_long = 37.6 + (rand(0, 10) / 1000);
-        $this->ip_address = "123.123.123.123";      
-        $this->district = 1;
-        $this->area = 3;
-        $this->setup_by = 1;  
-        $this->setup_contact = "sdfgh";
-        $this->setup_address="adress";
-        $this->setup_place = "palce";
-        $this->setup_date = date("Y-m-d");
-        
-        $this->setup_tel = "12312312";
-        $this->activated = date("Y-m-d H:i:s");
-        $this->inet_type = 1;
-    }
+    
 
 }

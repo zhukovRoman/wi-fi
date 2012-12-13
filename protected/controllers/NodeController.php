@@ -56,7 +56,7 @@ class NodeController extends Controller {
      */
     public function actionCreate() {
         $model = new Node;
-        $model->testfill();
+        //$model->testfill();
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
 
@@ -72,7 +72,6 @@ class NodeController extends Controller {
            
             if ($model->save())
             {
-                echo $model->id."sdfs";die();
                 if ($model->saveGroup($_POST['tags']))
                     $this->redirect(array('view', 'id' => $model->id));
             }

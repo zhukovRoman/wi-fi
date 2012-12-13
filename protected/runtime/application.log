@@ -1007,3 +1007,60 @@ in Z:\home\wi-fi\www\index.php (13)
 2012/12/14 01:23:29 [warning] [application] Failed to set unsafe attribute "setup_date" of "Node".
 in Z:\home\wi-fi\www\protected\controllers\NodeController.php (72)
 in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:52:21 [warning] [application] Failed to set unsafe attribute "hostname" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:52:21 [warning] [application] Failed to set unsafe attribute "serial" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:52:21 [warning] [application] Failed to set unsafe attribute "mac_wifi" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:52:21 [warning] [application] Failed to set unsafe attribute "mac_lte" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:52:21 [warning] [application] Failed to set unsafe attribute "inet_type" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:52:21 [warning] [application] Failed to set unsafe attribute "ip_address" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:52:21 [warning] [application] Failed to set unsafe attribute "fw_version" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:52:21 [warning] [application] Failed to set unsafe attribute "area" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:52:21 [warning] [application] Failed to set unsafe attribute "status" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:52:21 [warning] [application] Failed to set unsafe attribute "group" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:52:21 [warning] [application] Failed to set unsafe attribute "geo_lat" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:52:21 [warning] [application] Failed to set unsafe attribute "geo_long" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:52:21 [warning] [application] Failed to set unsafe attribute "setup_address" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:52:21 [warning] [application] Failed to set unsafe attribute "setup_place" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:52:21 [warning] [application] Failed to set unsafe attribute "setup_contact" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:52:21 [warning] [application] Failed to set unsafe attribute "setup_tel" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:52:21 [warning] [application] Failed to set unsafe attribute "activated" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:52:21 [warning] [application] Failed to set unsafe attribute "setup_by" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
+2012/12/14 01:52:21 [warning] [application] Failed to set unsafe attribute "setup_date" of "Node".
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (71)
+in Z:\home\wi-fi\www\index.php (13)
