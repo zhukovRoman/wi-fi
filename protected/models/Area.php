@@ -95,10 +95,10 @@ class Area extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-        public static function getDropDrownItems() {
+        public static function getDropDrownItems($isNewRecord) {
         $all = Area::model()->findAll();
         $res = array();
-        $res = array('0'=>'--Выберете округ--');
+        ($isNewRecord)? $res = array('0'=>'--Выберете округ--'): "";
         foreach ($all as $i) {
             $res[$i->id] = $i->name;
         }

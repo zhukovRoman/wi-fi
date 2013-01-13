@@ -1,5 +1,5 @@
 .ms-container{
-  background: transparent url('img/switch.png') no-repeat 170px 80px;
+  background: transparent url('../images/switch.png') no-repeat 164px 80px; 
 }
 
 .ms-container:after{
@@ -58,7 +58,7 @@
 }
 
 .ms-container .ms-selectable li.ms-elem-selectable,
-.ms-container .ms-selection li.ms-elem-selected{
+.ms-container .ms-selection li.ms-elem-selection{
   border-bottom: 1px #eee solid;
   padding: 2px 10px;
   color: #555;

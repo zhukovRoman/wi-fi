@@ -11,11 +11,11 @@
 
 
 <div id="dropDownArea" style="display: block;">
-    <?php echo $form->dropDownListRow($model, 'area', Area::getDropDrownItems(), array('class' => 'span5')); ?>
+    <?php echo $form->dropDownListRow($model, 'area', Area::getDropDrownItems($model->isNewRecord), array('class' => 'span5')); ?>
 </div>
 
 <div id="dropDownDistrict" style="display: block;">
-    <?php echo $form->dropDownListRow($model, 'district', District::getDropDrownItems(), array('class' => 'span5')); ?>
+    <?php echo $form->dropDownListRow($model, 'district', District::getDropDrownItems($model->isNewRecord), array('class' => 'span5')); ?>
 </div>
 
 <?php echo $form->dropDownListRow($model, 'status', NodeStatus::getDropDrownItems(), array('class' => 'span5')); ?>

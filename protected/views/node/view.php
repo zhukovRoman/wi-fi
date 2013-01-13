@@ -38,7 +38,7 @@ $data = array
     'hostname'=>$model->hostname,
     'serial'=>$model->serial,
     'mac_wifi'=>$model->mac_wifi,
-    'mac_lte'=>$Model->mac_lte,
+    'mac_lte'=>$model->mac_lte,
     'inet_type'=>$model->inetType->name,
     'country'=>$model->country0->name,
     'region'=>$model->region0->name,
@@ -56,6 +56,7 @@ $data = array
     'activated'=> $model->activated,
     'ip_address'=> $model -> ip_address,
     'fw_version'=>$model->fw_version,
+    'tags'=>$model->getListTags(),
     //'geo_lat',
     //'geo_long',
 );

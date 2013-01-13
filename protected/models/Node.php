@@ -41,8 +41,6 @@
  */
 class Node extends CActiveRecord {
 
-    
-
     /**
      * Returns the static model of the specified AR class.
      * @param string $className active record class name.
@@ -63,18 +61,18 @@ class Node extends CActiveRecord {
      * @return array validation rules for model attributes.
      */
     public function rules() {
-        // NOTE: you should only define rules for those attributes that
-        // will receive user inputs.
+// NOTE: you should only define rules for those attributes that
+// will receive user inputs.
         return array(
-            
             array('inet_type, country, region, city, area, district, status, group, setup_by', 'numerical', 'integerOnly' => true),
             array('geo_lat, geo_long', 'numerical'),
             array('hostname, serial, mac_wifi, mac_lte, setup_address, setup_place, setup_contact, setup_tel', 'length', 'max' => 50),
-            array('ip_address', 'length', 'max' => 11),
-            array('fw_version', 'length', 'max' => 10),
+            array('ip_address', 'length', 'max' => 15),
+            array('fw_version', 'length', 'max' => 15),
             array('setup_date, activated', 'safe'),
+            array('ip_address', 'required'),
             // The following rule is used by search().
-            // Please remove those attributes that should not be searched.
+// Please remove those attributes that should not be searched.
             array('id, hostname, serial, mac_wifi, mac_lte, inet_type, country, region, city, area, district, status, group, setup_by, setup_date, setup_address, setup_place, setup_contact, setup_tel, activated, ip_address, fw_version, geo_lat, geo_long', 'safe', 'on' => 'search'),
         );
     }
@@ -83,8 +81,8 @@ class Node extends CActiveRecord {
      * @return array relational rules.
      */
     public function relations() {
-        // NOTE: you may need to adjust the relation name and the related
-        // class name for the relations automatically generated below.
+// NOTE: you may need to adjust the relation name and the related
+// class name for the relations automatically generated below.
         return array(
             'comp2aps' => array(self::HAS_MANY, 'Comp2ap', 'id_ap'),
             'country0' => array(self::BELONGS_TO, 'Country', 'country'),
@@ -135,8 +133,8 @@ class Node extends CActiveRecord {
      * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
      */
     public function search() {
-        // Warning: Please modify the following code to remove attributes that
-        // should not be searched.
+// Warning: Please modify the following code to remove attributes that
+// should not be searched.
 
         $criteria = new CDbCriteria;
 
@@ -170,6 +168,63 @@ class Node extends CActiveRecord {
                 ));
     }
 
+    public function saveGroup($groups) {
+
+
+        $exists = NodeTag::model()->findAll('node_id=:node', array('node' => $this->id));
+        if ($exists) {
+            foreach ($exists as $t)
+                $t->delete();
+        }
+        if ($groups) {
+            foreach ($groups as $g) {
+                $toSave = new NodeTag();
+                $toSave->tag_id = $g;
+                $toSave->node_id = $this->id;
+                if (!$toSave->save())
+                    return false;
+            }
+        }
+        return true;
+    }
+
+    public function getTags($post) {
+        $tags = Tag::model()->findAll();
+        $res = "";
+        if ($this->isNewRecord) {
+
+            foreach ($tags as $t) {
+                if (isset($post) && in_array($t->id, $post))
+                    $res .= "<option selected value='$t->id'>" . $t->text . "</option>";
+                else
+                    $res .= "<option value='$t->id'>" . $t->text . "</option>";
+            }
+        }
+        else {
+            foreach ($tags as $t) {
+                if (Tag::checkTag($t, $this->id))
+                    $res .= "<option selected value='$t->id'>" . $t->text . "</option>";
+                else
+                    $res .= "<option value='$t->id'>" . $t->text . "</option>";
+            }
+        }
+        return $res;
+    }
     
+    public function getListTags()
+    {
+        
+        $exists = NodeTag::model()->findAll('node_id=:node', array('node' => $this->id));
+        
+        if ($exists) {
+            
+            foreach ($exists as $t)
+            {
+                $tag = Tag::model()->findByPk ($t->tag_id);
+                $res .= $tag->text.",";
+            }
+        }
+        return $res;
+    }
 
 }

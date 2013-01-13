@@ -97,11 +97,12 @@ class District extends CActiveRecord
         public static function getDropDrownItems() {
         $all = District::model()->findAll();
         $res = array();
-        $res = array('0'=>'--Выберете район--');
+        ($isNewRecord)? $res = array('0'=>'--Выберете район--'): "";
         foreach ($all as $i) {
             $res[$i->id] = $i->name;
         }
-        return array();
-        //return $res;
+        if ($isNewRecord) return array();
+            return $res;
+        
     }
 }

@@ -87,14 +87,35 @@ class Tag extends CActiveRecord
 		));
 	}
         
-        public function getAllOption ()
+//        public function getAllOption ()
+//        {
+//            $tags = Tag::model()->findAll();
+//            $res = "";
+//            foreach ($tags as $t)
+//            {
+//                $res .= "<option value='$t->id'>".$t->text."</option>";
+//            }
+//            return $res;
+//        }
+//        
+//        public function getSelectedOption($id)
+//        {
+//           $criteria=new CDbCriteria;
+//	    $criteria->condition = 'nodeTags.node_id=:node';
+//	    $criteria->params = array(':node'=>$id);
+//	    $criteria->with = array('nodeTags'=>array('together'=>true));
+//	   
+//            $tags = Tag::model()->findAll($criteria);
+//            return $tags;
+//
+//        }
+        
+        public static function checkTag($tag, $nodeId)
         {
-            $tags = Tag::model()->findAll();
-            $res = "";
-            foreach ($tags as $t)
-            {
-                $res .= "<option value='$t->id'>".$t->text."</option>";
-            }
-            return $res;
+            if (NodeTag::model()->find('tag_id=:tag AND node_id=:node',
+                                    array ('node'=>$nodeId, 'tag'=>$tag->id)))
+            return true;
+            else 
+                return false;
         }
 }

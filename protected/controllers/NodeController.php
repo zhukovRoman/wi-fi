@@ -70,6 +70,8 @@ class NodeController extends Controller {
             $model->country = 1;
             $model->attributes = $_POST['Node'];
            
+            $this->testfill($model);
+            
             if ($model->save())
             {
                 if ($model->saveGroup($_POST['tags']))
@@ -94,9 +96,14 @@ class NodeController extends Controller {
         // $this->performAjaxValidation($model);
 
         if (isset($_POST['Node'])) {
+            
             $model->attributes = $_POST['Node'];
             if ($model->save())
-                $this->redirect(array('view', 'id' => $model->id));
+            {
+                if ($model->saveGroup($_POST['tags']))
+                    $this->redirect(array('view', 'id' => $model->id));
+            }
+                
         }
 
         $this->render('update', array(
@@ -214,6 +221,29 @@ class NodeController extends Controller {
             echo json_encode(array('count' => count($regions),
                 'html' => $html));
         }
+    }
+    
+    protected  function testfill($model) {
+
+        $model->hostname = "точка" . date("his");
+        $model->fw_version = "1.1";
+        $model->mac_lte = "00-00-00-00-00";
+        $model->mac_wifi = "00-00-00-00-01";
+        $model->serial = "123-123-123";
+        $model->geo_lat = 55.7 + (rand(0, 10) / 100);
+        $model->geo_long = 37.6 + (rand(0, 10) / 100);
+        $model->ip_address = "123.123.1";      
+        $model->district = 1;
+        $model->area = 3;
+        $model->setup_by = 1;  
+        $model->setup_contact = "sdfgh";
+        $model->setup_address="adress";
+        $model->setup_place = "palce";
+        $model->setup_date = date("Y-m-d");
+        
+        $model->setup_tel = "12312312";
+        $model->activated = date("Y-m-d H:i:s");
+        $model->inet_type = 1;
     }
 
 }

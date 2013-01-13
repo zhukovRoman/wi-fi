@@ -6,7 +6,7 @@ class AccountController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	//public $layout='//layouts/column2';
 
 	/**
 	 * @return array action filters
@@ -28,7 +28,7 @@ class AccountController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','Signup'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -167,5 +167,45 @@ class AccountController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+        
+        public function actionSignup()
+	{
+		// Создать модель и указать ей, что используется сценарий регистрации
+		$model = new Account(Account::SCENARIO_SIGNUP);
+	
+		//if (!Yii::app()->user->isGuest)
+		//	throw new CHttpException(403, 'Недостаточно прав для указанного действия');
+		
+		// В случае запроса аякс-валидации
+		if(isset($_POST['ajax']) && $_POST['ajax']==='account-form')
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
+		
+		// Если пришли данные для сохранения
+		if(isset($_POST['Account']))
+		{
+			// Безопасное присваивание значений атрибутам
+			$model->attributes = $_POST['Account'];
+	
+			// Проверка данных
+			if($model->validate())
+			{
+				// Сохранить полученные данные
+				// false нужен для того, чтобы не производить повторную проверку
+				$model->save(false);
+				
+				// Отправляем письмо с активационным кодом
+				//$this->sendActivationKey($model);
+				
+				// Вывести форму благодарности за регистрацию
+				$this->render('signup2');
+				return;
+			}
+		}
+                
+		$this->render('signup', array('model'=>$model));
 	}
 }

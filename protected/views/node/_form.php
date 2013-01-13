@@ -11,14 +11,13 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
 <?php echo $form->errorSummary($model); ?>
 
-<?php $this->renderPartial("formParts/_firstPart", array ("model"=>$model, "form"=>$form));?>
+<?php $this->renderPartial("formParts/_firstPart", array("model" => $model, "form" => $form)); ?>
 <hr>
-<?php $this->renderPartial("formParts/_secondPart", array ("model"=>$model, "form"=>$form));?>
-<?php //$this->renderPartial("formParts/_map", array ("model"=>$model, "form"=>$form));?>
-
-<?php $this->renderPartial("formParts/_thirdPart", array ("model"=>$model, "form"=>$form));?>
+<?php $this->renderPartial("formParts/_secondPart", array("model" => $model, "form" => $form)); ?>
+<?php $this->renderPartial("formParts/_map", array("model" => $model, "form" => $form)); ?>
+<?php $this->renderPartial("formParts/_thirdPart", array("model" => $model, "form" => $form)); ?>
 <hr>
-<?php //$this->renderPartial("formParts/_tags", array ("model"=>$model, "form"=>$form));?>
+<?php $this->renderPartial("formParts/_tags", array("model" => $model, "form" => $form)); ?>
 <div class="form-actions">
     <?php
     $this->widget('bootstrap.widgets.TbButton', array(
