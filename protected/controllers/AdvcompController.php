@@ -63,10 +63,37 @@ class AdvcompController extends Controller {
                 $this->redirect(array('view', 'id' => $model->id));
         }
 
+        $cities = City::model()->findAll();
+        $nodesOfCity = array();
+        foreach ($cities as $city)
+        {
+            $nodesOfCity[$city->id] = array();
+            foreach ($city->nodes as $node)
+            {
+                $nodesOfCity[$city->id][]=$node->id;
+            }
+        }
+        
+        $nodesOfTag = array();
+        foreach (Tag::model()->findAll() as $tag)
+        {
+            $nodesOfTag[$tag->id] = array();
+            foreach ($tag->nodeTags as $node)
+            {
+                $nodesOfTag[$tag->id][] = $node->node_id;
+            }
+        }
+        
+        
         $this->render('chosePoint', array(
             'model' => $model,
-            'dataProvider' => $dataProvider,
+            //'dataProvider' => $dataProvider,
             'all' => Node::model()->findAll(),
+            'cities'=> $cities,
+            'citiesSelect'=>$nodesOfCity,
+            'tagsSelect'=>$nodesOfTag,
+            'tags'=>Tag::model()->findAll(),
+            
         ));
     }
 

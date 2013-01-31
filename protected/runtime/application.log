@@ -1703,3 +1703,28 @@ in Z:\home\wi-fi\www\index.php (13)
 2013/01/14 01:10:27 [warning] [application] Failed to set unsafe attribute "password" of "Account".
 in Z:\home\wi-fi\www\protected\controllers\AccountController.php (191)
 in Z:\home\wi-fi\www\index.php (13)
+2013/01/31 20:31:47 [error] [exception.CException] exception 'CException' with message 'Property "Tag.name" is not defined.' in Z:\home\wi-fi\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('name')
+#1 Z:\home\wi-fi\www\protected\views\advcomp\chosePoint.php(16): CActiveRecord->__get('name')
+#2 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require('Z:\home\wi-fi\w...')
+#3 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\wi-fi\w...', Array, true)
+#4 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\wi-fi\w...', Array, true)
+#5 Z:\home\wi-fi\www\yii\framework\web\CController.php(783): CController->renderPartial('chosePoint', Array, true)
+#6 Z:\home\wi-fi\www\protected\controllers\AdvcompController.php(97): CController->render('chosePoint', Array)
+#7 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): AdvcompController->actionaddStep1()
+#8 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#15 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('addStep1')
+#17 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('advcomp/addStep...')
+#18 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php?r=advcomp/addStep1
+---

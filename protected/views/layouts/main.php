@@ -10,7 +10,8 @@
             <?php Yii::app()->getClientScript()->registerScriptFile(Yii::app()->request->baseUrl . '/js/jquery.js', CClientScript::POS_HEAD); ?>
             <?php Yii::app()->getClientScript()->registerScriptFile(Yii::app()->request->baseUrl . '/js/jquery.multi-select.js',CClientScript::POS_HEAD); ?>
             <?php Yii::app()->getClientScript()->registerScriptFile(Yii::app()->request->baseUrl . '/js/bootstrap.js', CClientScript::POS_END); ?>
-            
+            <?php Yii::app()->getClientScript()->registerScriptFile(Yii::app()->request->baseUrl . '/js/chosen/chosen.jquery.js',CClientScript::POS_HEAD); ?>
+           
 
             
             <!--<script src="http://cdn.leafletjs.com/leaflet-0.4/leaflet.js"></script>-->
@@ -21,7 +22,7 @@
             <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap/bootstrap.css" />
             <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap/bootstrap-yii.css" />
             <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap/bootstrap-responsive.min.css" />
-
+            <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/chosen/chosen.css" />
 
 
 
