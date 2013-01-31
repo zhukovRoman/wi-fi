@@ -85,7 +85,7 @@ class AdvcompController extends Controller {
         }
         
         
-        $this->render('chosePoint', array(
+        $this->render('addCompany', array(
             'model' => $model,
             //'dataProvider' => $dataProvider,
             'all' => Node::model()->findAll(),

@@ -38,6 +38,9 @@
  * @property NodeGroup $group0
  * @property InetType $inetType
  * @property NodeStatus $status0
+ * @property NodeTag[] $nodeTags
+ * @property NodeCompany[] $nodeCompanies
+ * 
  */
 class Node extends CActiveRecord {
 
@@ -84,7 +87,7 @@ class Node extends CActiveRecord {
 // NOTE: you may need to adjust the relation name and the related
 // class name for the relations automatically generated below.
         return array(
-            'comp2aps' => array(self::HAS_MANY, 'Comp2ap', 'id_ap'),
+            
             'country0' => array(self::BELONGS_TO, 'Country', 'country'),
             'region0' => array(self::BELONGS_TO, 'Region', 'region'),
             'city0' => array(self::BELONGS_TO, 'City', 'city'),
@@ -93,6 +96,8 @@ class Node extends CActiveRecord {
             'group0' => array(self::BELONGS_TO, 'NodeGroup', 'group'),
             'inetType' => array(self::BELONGS_TO, 'InetType', 'inet_type'),
             'status0' => array(self::BELONGS_TO, 'NodeStatus', 'status'),
+            'nodeTags' => array(self::HAS_MANY, 'NodeTag', 'node_id'),
+            'nodeCompany' => array(self::HAS_MANY, 'NodeCompany', 'node_id'),
         );
     }
 

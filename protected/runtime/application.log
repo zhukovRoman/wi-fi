@@ -1728,3 +1728,27 @@ Stack trace:
 #20 {main}
 REQUEST_URI=/index.php?r=advcomp/addStep1
 ---
+2013/01/31 22:09:41 [error] [exception.CException] exception 'CException' with message 'AdvcompController cannot find the requested view "chosePoints".' in Z:\home\wi-fi\www\yii\framework\web\CController.php:879
+Stack trace:
+#0 Z:\home\wi-fi\www\protected\views\advcomp\addCompany.php(12): CController->renderPartial('chosePoints', Array)
+#1 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require('Z:\home\wi-fi\w...')
+#2 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\wi-fi\w...', Array, true)
+#3 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\wi-fi\w...', Array, true)
+#4 Z:\home\wi-fi\www\yii\framework\web\CController.php(783): CController->renderPartial('addCompany', Array, true)
+#5 Z:\home\wi-fi\www\protected\controllers\AdvcompController.php(97): CController->render('addCompany', Array)
+#6 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): AdvcompController->actionaddStep1()
+#7 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#10 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#14 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('addStep1')
+#16 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('advcomp/addStep...')
+#17 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/index.php?r=advcomp/addStep1
+---
