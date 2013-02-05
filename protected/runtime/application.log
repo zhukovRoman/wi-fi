@@ -1752,3 +1752,199 @@ Stack trace:
 #19 {main}
 REQUEST_URI=/index.php?r=advcomp/addStep1
 ---
+2013/02/05 20:46:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploadBg".' in Z:\home\wi-fi\www\yii\framework\web\CController.php:484
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CController.php(271): CController->missingAction('uploadBg')
+#1 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('uploadBg')
+#2 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/uploadBg')
+#3 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=site/uploadBg&PHPSESSID=33nhf6fbu292qi9ffuho2n3hn0&YII_CSRF_TOKEN=1e92f14e0daa7b3f6e734c79a86dbfe45dff5a7c&qqfile=45e18847782d30e022231ad250c87823.jpg
+HTTP_REFERER=http://wi-fi/index.php?r=advcomp/addStep1
+---
+2013/02/05 21:34:01 [error] [php] filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for images/bg/images/bg/sdfgh92.jpg (Z:\home\wi-fi\www\protected\controllers\SiteController.php:109)
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 Z:\home\wi-fi\www\yii\framework\web\CController.php(287): SiteController->runAction()
+#2 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#3 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#4 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#5 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 Z:\home\wi-fi\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=site/uploadBg&PHPSESSID=33nhf6fbu292qi9ffuho2n3hn0&YII_CSRF_TOKEN=1e92f14e0daa7b3f6e734c79a86dbfe45dff5a7c&qqfile=sdfgh.jpg
+in Z:\home\wi-fi\www\protected\controllers\SiteController.php (109)
+in Z:\home\wi-fi\www\index.php (13)
+2013/02/05 21:34:29 [error] [php] filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for images/bg/images/bg/sdfgh31.jpg (Z:\home\wi-fi\www\protected\controllers\SiteController.php:109)
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 Z:\home\wi-fi\www\yii\framework\web\CController.php(287): SiteController->runAction()
+#2 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#3 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#4 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#5 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 Z:\home\wi-fi\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=site/uploadBg&PHPSESSID=33nhf6fbu292qi9ffuho2n3hn0&YII_CSRF_TOKEN=1e92f14e0daa7b3f6e734c79a86dbfe45dff5a7c&qqfile=sdfgh.jpg
+in Z:\home\wi-fi\www\protected\controllers\SiteController.php (109)
+in Z:\home\wi-fi\www\index.php (13)
+2013/02/05 21:35:50 [error] [php] filesize() [<a href='function.filesize'>function.filesize</a>]: stat failed for images/bg/images/bg/45e18847782d30e022231ad250c8782385.jpg (Z:\home\wi-fi\www\protected\controllers\SiteController.php:109)
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 Z:\home\wi-fi\www\yii\framework\web\CController.php(287): SiteController->runAction()
+#2 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#3 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#4 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#5 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 Z:\home\wi-fi\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=site/uploadBg&PHPSESSID=33nhf6fbu292qi9ffuho2n3hn0&YII_CSRF_TOKEN=1e92f14e0daa7b3f6e734c79a86dbfe45dff5a7c&qqfile=45e18847782d30e022231ad250c87823.jpg
+in Z:\home\wi-fi\www\protected\controllers\SiteController.php (109)
+in Z:\home\wi-fi\www\index.php (13)
+2013/02/05 21:45:44 [error] [php] imagecreatefrompng() [<a href='function.imagecreatefrompng'>function.imagecreatefrompng</a>]: 'images/bg/sdfgh23.jpg' is not a valid PNG file (Z:\home\wi-fi\www\protected\controllers\SiteController.php:108)
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 Z:\home\wi-fi\www\yii\framework\web\CController.php(287): SiteController->runAction()
+#2 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#3 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#4 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#5 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 Z:\home\wi-fi\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=site/uploadBg&PHPSESSID=33nhf6fbu292qi9ffuho2n3hn0&YII_CSRF_TOKEN=1e92f14e0daa7b3f6e734c79a86dbfe45dff5a7c&qqfile=sdfgh.jpg
+in Z:\home\wi-fi\www\protected\controllers\SiteController.php (108)
+in Z:\home\wi-fi\www\index.php (13)
+2013/02/05 21:46:18 [error] [php] imagesy() expects parameter 1 to be resource, string given (Z:\home\wi-fi\www\protected\controllers\SiteController.php:110)
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 Z:\home\wi-fi\www\yii\framework\web\CController.php(287): SiteController->runAction()
+#2 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#3 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#4 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#5 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 Z:\home\wi-fi\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=site/uploadBg&PHPSESSID=33nhf6fbu292qi9ffuho2n3hn0&YII_CSRF_TOKEN=1e92f14e0daa7b3f6e734c79a86dbfe45dff5a7c&qqfile=sdfgh.jpg
+in Z:\home\wi-fi\www\protected\controllers\SiteController.php (110)
+in Z:\home\wi-fi\www\index.php (13)
+2013/02/05 22:20:05 [error] [exception.CException] exception 'CException' with message 'Property "Advcomp.bgcolor" is not defined.' in Z:\home\wi-fi\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('bgcolor')
+#1 Z:\home\wi-fi\www\yii\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('bgcolor')
+#2 Z:\home\wi-fi\www\yii\framework\web\helpers\CHtml.php(1887): CHtml::resolveValue(Object(Advcomp), 'bgcolor')
+#3 Z:\home\wi-fi\www\yii\framework\web\helpers\CHtml.php(1217): CHtml::activeInputField('text', Object(Advcomp), 'bgcolor', Array)
+#4 Z:\home\wi-fi\www\yii\framework\web\widgets\CActiveForm.php(658): CHtml::activeTextField(Object(Advcomp), 'bgcolor', Array)
+#5 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInputVertical.php(142): CActiveForm->textField(Object(Advcomp), 'bgcolor', Array)
+#6 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInput.php(222): TbInputVertical->textField()
+#7 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(174): TbInput->run()
+#8 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#9 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\TbActiveForm.php(186): TbActiveForm->inputRow('textfield', Object(Advcomp), 'bgcolor', NULL, Array)
+#10 Z:\home\wi-fi\www\protected\views\advcomp\choseStyle.php(83): TbActiveForm->textFieldRow(Object(Advcomp), 'bgcolor', Array)
+#11 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require('Z:\home\wi-fi\w...')
+#12 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\wi-fi\w...', Array, true)
+#13 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\wi-fi\w...', Array, true)
+#14 Z:\home\wi-fi\www\protected\views\advcomp\addCompany.php(29): CController->renderPartial('choseStyle', Array)
+#15 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require('Z:\home\wi-fi\w...')
+#16 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\wi-fi\w...', Array, true)
+#17 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\wi-fi\w...', Array, true)
+#18 Z:\home\wi-fi\www\yii\framework\web\CController.php(783): CController->renderPartial('addCompany', Array, true)
+#19 Z:\home\wi-fi\www\protected\controllers\AdvcompController.php(97): CController->render('addCompany', Array)
+#20 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): AdvcompController->actionaddStep1()
+#21 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#22 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#24 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#25 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#26 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#28 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('addStep1')
+#30 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('advcomp/addStep...')
+#31 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#32 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/index.php?r=advcomp/addStep1
+---
+2013/02/05 22:20:19 [error] [exception.CException] exception 'CException' with message 'Property "Advcomp.bgcolor" is not defined.' in Z:\home\wi-fi\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('bgcolor')
+#1 Z:\home\wi-fi\www\yii\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('bgcolor')
+#2 Z:\home\wi-fi\www\yii\framework\web\helpers\CHtml.php(1887): CHtml::resolveValue(Object(Advcomp), 'bgcolor')
+#3 Z:\home\wi-fi\www\yii\framework\web\helpers\CHtml.php(1217): CHtml::activeInputField('text', Object(Advcomp), 'bgcolor', Array)
+#4 Z:\home\wi-fi\www\yii\framework\web\widgets\CActiveForm.php(658): CHtml::activeTextField(Object(Advcomp), 'bgcolor', Array)
+#5 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInputVertical.php(142): CActiveForm->textField(Object(Advcomp), 'bgcolor', Array)
+#6 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInput.php(222): TbInputVertical->textField()
+#7 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(174): TbInput->run()
+#8 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#9 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\TbActiveForm.php(186): TbActiveForm->inputRow('textfield', Object(Advcomp), 'bgcolor', NULL, Array)
+#10 Z:\home\wi-fi\www\protected\views\advcomp\choseStyle.php(83): TbActiveForm->textFieldRow(Object(Advcomp), 'bgcolor', Array)
+#11 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require('Z:\home\wi-fi\w...')
+#12 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\wi-fi\w...', Array, true)
+#13 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\wi-fi\w...', Array, true)
+#14 Z:\home\wi-fi\www\protected\views\advcomp\addCompany.php(29): CController->renderPartial('choseStyle', Array)
+#15 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require('Z:\home\wi-fi\w...')
+#16 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\wi-fi\w...', Array, true)
+#17 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\wi-fi\w...', Array, true)
+#18 Z:\home\wi-fi\www\yii\framework\web\CController.php(783): CController->renderPartial('addCompany', Array, true)
+#19 Z:\home\wi-fi\www\protected\controllers\AdvcompController.php(97): CController->render('addCompany', Array)
+#20 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): AdvcompController->actionaddStep1()
+#21 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#22 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#24 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#25 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#26 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#28 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('addStep1')
+#30 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('advcomp/addStep...')
+#31 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#32 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/index.php?r=advcomp/addStep1
+HTTP_REFERER=http://wi-fi/index.php?r=advcomp/addStep1
+---
+2013/02/05 22:20:21 [error] [exception.CException] exception 'CException' with message 'Property "Advcomp.bgcolor" is not defined.' in Z:\home\wi-fi\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('bgcolor')
+#1 Z:\home\wi-fi\www\yii\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('bgcolor')
+#2 Z:\home\wi-fi\www\yii\framework\web\helpers\CHtml.php(1887): CHtml::resolveValue(Object(Advcomp), 'bgcolor')
+#3 Z:\home\wi-fi\www\yii\framework\web\helpers\CHtml.php(1217): CHtml::activeInputField('text', Object(Advcomp), 'bgcolor', Array)
+#4 Z:\home\wi-fi\www\yii\framework\web\widgets\CActiveForm.php(658): CHtml::activeTextField(Object(Advcomp), 'bgcolor', Array)
+#5 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInputVertical.php(142): CActiveForm->textField(Object(Advcomp), 'bgcolor', Array)
+#6 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\input\TbInput.php(222): TbInputVertical->textField()
+#7 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(174): TbInput->run()
+#8 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#9 Z:\home\wi-fi\www\protected\extensions\bootstrap\widgets\TbActiveForm.php(186): TbActiveForm->inputRow('textfield', Object(Advcomp), 'bgcolor', NULL, Array)
+#10 Z:\home\wi-fi\www\protected\views\advcomp\choseStyle.php(83): TbActiveForm->textFieldRow(Object(Advcomp), 'bgcolor', Array)
+#11 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require('Z:\home\wi-fi\w...')
+#12 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\wi-fi\w...', Array, true)
+#13 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\wi-fi\w...', Array, true)
+#14 Z:\home\wi-fi\www\protected\views\advcomp\addCompany.php(29): CController->renderPartial('choseStyle', Array)
+#15 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require('Z:\home\wi-fi\w...')
+#16 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\wi-fi\w...', Array, true)
+#17 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\wi-fi\w...', Array, true)
+#18 Z:\home\wi-fi\www\yii\framework\web\CController.php(783): CController->renderPartial('addCompany', Array, true)
+#19 Z:\home\wi-fi\www\protected\controllers\AdvcompController.php(97): CController->render('addCompany', Array)
+#20 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(50): AdvcompController->actionaddStep1()
+#21 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#22 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#24 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#25 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#26 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#28 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('addStep1')
+#30 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('advcomp/addStep...')
+#31 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#32 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/index.php?r=advcomp/addStep1
+HTTP_REFERER=http://wi-fi/index.php?r=advcomp/addStep1
+---
+2013/02/05 22:35:19 [warning] [application] Failed to set unsafe attribute "branding" of "Advcomp".
+in Z:\home\wi-fi\www\protected\controllers\AdvcompController.php (61)
+in Z:\home\wi-fi\www\index.php (13)
+2013/02/05 22:35:19 [warning] [application] Failed to set unsafe attribute "bg_color" of "Advcomp".
+in Z:\home\wi-fi\www\protected\controllers\AdvcompController.php (61)
+in Z:\home\wi-fi\www\index.php (13)
+2013/02/05 22:35:19 [warning] [application] Failed to set unsafe attribute "margin_top" of "Advcomp".
+in Z:\home\wi-fi\www\protected\controllers\AdvcompController.php (61)
+in Z:\home\wi-fi\www\index.php (13)

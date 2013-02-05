@@ -83,7 +83,8 @@ class AdvcompController extends Controller {
                 $nodesOfTag[$tag->id][] = $node->node_id;
             }
         }
-        
+        $model->bg_color="d5d5d5";
+        $model->margin_top=100;
         
         $this->render('addCompany', array(
             'model' => $model,

@@ -65,6 +65,9 @@ return array(
 //            'password' => '',
 //            'charset' => 'utf8',
 //        ),
+        'ih' => array(
+            'class' => 'CImageHandler',
+        ),
         'errorHandler' => array(
             // use 'site/error' action to display errors
             'errorAction' => 'site/error',

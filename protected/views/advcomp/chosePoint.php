@@ -104,9 +104,7 @@
 <?php Yii::app()->getClientScript()->registerScriptFile('http://cdn.leafletjs.com/leaflet-0.4/leaflet.js', CClientScript::POS_HEAD); ?>
 <div id="map" style="height: 600px; width: 600px; float:left; margin-right: 20px; margin-top:20px;"></div>
 
-<div class="input" style="float:right; width: 300px" >
-    <input type="text" id="chosenAP">
-</div>
+
 <script>
     
     var IconSelect = L.icon({
@@ -134,7 +132,7 @@
             console.log (this.id);
             //this.setOpacity(0.1);
             this.checkOn();
-            $("#chosenAP").val($("#chosenAP").val()+this.id+";")
+            //$("#chosenAP").val($("#chosenAP").val()+this.id+";")
     }
     
     var mymarker = L.Marker.extend({
