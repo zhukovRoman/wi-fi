@@ -173,4 +173,14 @@ class ContentController extends Controller
         {
             Content::getNewContent();
         }
+        public static function getContent($nodeId)
+        {
+            $city = Node::model()->findByPk($nodeId)->city;
+            $contents = Content::model()->findAll("city_id=$city");
+            $content = $contents[count($contents-1)];
+            return array (
+                'usd'=>$content->usd,
+                'euro'=>$content->euro,
+            );
+        }
 }

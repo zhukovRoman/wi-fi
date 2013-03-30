@@ -22,4 +22,6 @@ class Controller extends CController
 	public $breadcrumbs=array();
         
         public $styles = array();
+        public $startPageStyle = array();
+        public $startPageContent = array();
 }

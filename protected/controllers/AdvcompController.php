@@ -23,11 +23,11 @@ class AdvcompController extends Controller {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('index', 'view', 'addStep1'),
+                'actions' => array('index', 'view'),
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('create', 'update'),
+                'actions' => array('create', 'update', 'addStep1', 'addStep2', 'Companypage', 'editprice', 'UpdateEachPrice'),
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -50,63 +50,156 @@ class AdvcompController extends Controller {
         ));
     }
 
-    /**
-     * Creates a new model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     */
+    public function actionCompanypage($id)
+    {
+        $model = $this->loadModel($id);
+        $this->render('view', array(
+                                    'model' => $model,                                    
+                        ));
+    }
+    
+   
     public function actionaddStep1() {
         $model = new Advcomp;
-
+        
         if (isset($_POST['Advcomp'])) {
+
             $model->attributes = $_POST['Advcomp'];
-            if ($model->save())
-                $this->redirect(array('view', 'id' => $model->id));
+            //print_r($model->attributes);
+            $model->status = 1;
+            $model->create_date = date("Y-m-d H:i:s");
+            $model->modify_date = date("Y-m-d H:i:s");
+            $model->owner = Yii::app()->user->getId();
+            if (isset($_POST['cities']))
+                $model->cities = implode(",", $_POST['cities']);
+            if (isset($_POST['tags']))
+                $model->tags = implode(",", $_POST['tags']);
+           // print_r($model->attributes);
+           // die();
+            if ($model->save()) {
+                $minPrice = $model->getMinPrice();
+                
+                $selectedNodes = explode(",", $model->selectedPoint);
+                foreach ($selectedNodes as $node) {
+                    $node_comp = new NodeCompany();
+                    $node_comp->company_id = $model->id;
+                    $node_comp->node_id = $node;
+                    $node_comp->cpp = $minPrice;
+                    $node_comp->save();
+                }
+                
+                $this->redirect(array('addStep2', 'id' => $model->id));
+            }
         }
+        //$model->name = "New company";
 
         $cities = City::model()->findAll();
         $nodesOfCity = array();
-        foreach ($cities as $city)
-        {
+        foreach ($cities as $city) {
             $nodesOfCity[$city->id] = array();
-            foreach ($city->nodes as $node)
-            {
-                $nodesOfCity[$city->id][]=$node->id;
+            foreach ($city->nodes as $node) {
+                $nodesOfCity[$city->id][] = $node->id;
             }
         }
-        
+
         $nodesOfTag = array();
-        foreach (Tag::model()->findAll() as $tag)
-        {
+        foreach (Tag::model()->findAll() as $tag) {
             $nodesOfTag[$tag->id] = array();
-            foreach ($tag->nodeTags as $node)
-            {
+            foreach ($tag->nodeTags as $node) {
                 $nodesOfTag[$tag->id][] = $node->node_id;
             }
         }
-        $model->bg_color="d5d5d5";
-        $model->margin_top=100;
-        
-        $this->render('addCompany', array(
+
+
+        $this->render('form', array(
             'model' => $model,
-            //'dataProvider' => $dataProvider,
             'all' => Node::model()->findAll(),
-            'cities'=> $cities,
-            'citiesSelect'=>$nodesOfCity,
-            'tagsSelect'=>$nodesOfTag,
-            'tags'=>Tag::model()->findAll(),
-            
+            'cities' => $cities,
+            'citiesSelect' => $nodesOfCity,
+            'tagsSelect' => $nodesOfTag,
+            'tags' => Tag::model()->findAll(),
         ));
     }
 
-    public function actionCreate() {
+     public function actionaddStep2($id)
+    {
+        $model = Advcomp::model()->findByPk($id);
+        if ($model==null)
+        {
+            throw new CHttpException(400, 'Invalid request. Please do not repeat this request again.');
+        }
+        
+        if (isset($_POST))
+        {
+            $summ = $_POST['summ'];
+            if (isset($_POST['fromRobokassa']))
+            {
+//                echo "Оплата компании на $summ через RK";
+//                die();
+                   $model->balance += $summ;
+                   $model->status = 5;
+                   $model->saveAttributes(array('balance', 'status'));
+                   $this->redirect(array('companypage', 'id' => $model->id));
+            }
+            if (isset ($_POST['fromBalance']))
+            {
+               $user = Account::model()->findByPk(Yii::app()->user->getId());
+               if ($user->balance>=$summ)
+               {
+                   $user->balance-=$summ;
+                   $user->saveAttributes(array ('balance'));
+                   $model->balance += $summ;
+                   $model->status = 5;
+                   $model->saveAttributes(array('balance', 'status'));
+                   $this->redirect(array('companypage', 'id' => $model->id));
+                    
+               }
+            }
+        }
+        
+        
+        $this->render('step2', array(
+                'model' => $model,
+                'acc' => Account::model()->findByPk(Yii::app()->user->getId()),
+        ));
+        
         
     }
 
-    /**
-     * Updates a particular model.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id the ID of the model to be updated
-     */
+    public function actionUpdateEachPrice()
+    {
+        print_r($_POST);
+        $id = intval(($_POST['pk']));
+        $model = NodeCompany::model()->findByPk($id);
+        if ($model!=null)
+        {
+            $model->cpp = $_POST['value'];
+            $model->save();
+        }
+
+    }
+    public function actionEditPrice($id)
+    {
+        
+        //$nodes = NodeCompany::model()->findAll("company_id=$id");
+        $criteria = new CDbCriteria;
+        //$criteria->addCondition('status_id=1');
+        $criteria->condition = "t.company_id=:company";
+
+        $criteria->params = array(':company' => $id);
+        $criteria->with = array('node');
+
+        $dataProvider = new CActiveDataProvider("NodeCompany", array(
+                    'criteria' => $criteria,
+                    //'sort' => $sort,
+                    'pagination' => array(
+                        'pageSize' => 20,
+                    ),
+                ));
+        
+        $this->render("tablePrice", array ("nodes"=>$nodes, "dp" => $dataProvider));
+    }
+   
     public function actionUpdate($id) {
         $model = $this->loadModel($id);
 
@@ -114,13 +207,61 @@ class AdvcompController extends Controller {
         // $this->performAjaxValidation($model);
 
         if (isset($_POST['Advcomp'])) {
+            $oldNodes = explode(",", $model->selectedPoint);
             $model->attributes = $_POST['Advcomp'];
-            if ($model->save())
-                $this->redirect(array('view', 'id' => $model->id));
+            $model->status = 1;
+            $model->modify_date = date("Y-m-d H:i:s");
+            if (isset($_POST['cities']))
+                $model->cities = implode(",", $_POST['cities']);
+            if (isset($_POST['tags']))
+                $model->tags = implode(",", $_POST['tags']);
+            if ($model->save()) {
+                $minPrice = $model->getMinPrice();
+                $newNodes = explode(",", $model->selectedPoint);
+                
+                $forDelete = array_diff($oldNodes, $newNodes);
+                $forAdd = array_diff($newNodes, $oldNodes);
+                foreach ($forDelete as $node) {
+                    $node_comp = NodeCompany::model()->find("company_id=$model->id AND node_id=$node");
+                    $node_comp->delete();
+                }
+                 foreach ($forAdd as $node) {
+                    $node_comp = new NodeCompany();
+                    $node_comp->company_id = $model->id;
+                    $node_comp->node_id = $node;
+                    $node_comp->cpp = $minPrice;
+                    $node_comp->save();
+                }
+                
+                $this->redirect(array('CompanyPage', 'id' => $model->id));
+            }
         }
 
-        $this->render('update', array(
+        $cities = City::model()->findAll();
+        $nodesOfCity = array();
+        foreach ($cities as $city) {
+            $nodesOfCity[$city->id] = array();
+            foreach ($city->nodes as $node) {
+                $nodesOfCity[$city->id][] = $node->id;
+            }
+        }
+
+        $nodesOfTag = array();
+        foreach (Tag::model()->findAll() as $tag) {
+            $nodesOfTag[$tag->id] = array();
+            foreach ($tag->nodeTags as $node) {
+                $nodesOfTag[$tag->id][] = $node->node_id;
+            }
+        }
+
+
+        $this->render('form', array(
             'model' => $model,
+            'all' => Node::model()->findAll(),
+            'cities' => $cities,
+            'citiesSelect' => $nodesOfCity,
+            'tagsSelect' => $nodesOfTag,
+            'tags' => Tag::model()->findAll(),
         ));
     }
 
@@ -131,13 +272,19 @@ class AdvcompController extends Controller {
      */
     public function actionDelete($id) {
         if (Yii::app()->request->isPostRequest) {
-            // we only allow deletion via POST request
-            $this->loadModel($id)->delete();
-
-            // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-            if (!isset($_GET['ajax']))
-                $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+            $model->$this->loadModel($id);
+            $model->status = 15;
+            $model->save(false);
+            
         }
+//        
+//            // we only allow deletion via POST request
+//            $this->loadModel($id)->delete();
+//
+//            // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+//            if (!isset($_GET['ajax']))
+//                $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+//        }
         else
             throw new CHttpException(400, 'Invalid request. Please do not repeat this request again.');
     }

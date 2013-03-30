@@ -107,11 +107,17 @@ class SiteController extends Controller {
 
         $im = ImageCreateFromJpeg($result['filename']);
         $IS = GetImageSize($result['filename']);
+        if ($IS[0]!=1920)
+        {
+            //!!!!!!!!!! удалить файл !!!!!!!!!!!!! 
+            echo htmlspecialchars(json_encode(array ('success'=>false, 'msg'=>"wrong dimension")), ENT_NOQUOTES);
+            return;
+        }
         $h = $IS[1];
         $rgb = ImageColorAt($im, 1, $h-1);
         
 
-        $result['red'] =dechex(($rgb >> 16) & 0xFF);
+        $result['red'] = dechex(($rgb >> 16) & 0xFF);
         $result['green'] = dechex(($rgb >> 8) & 0xFF);
         $result['blue'] = dechex($rgb & 0xFF);
         $return = htmlspecialchars(json_encode($result), ENT_NOQUOTES);
@@ -122,4 +128,37 @@ class SiteController extends Controller {
         echo $return; // it's array
     }
 
+    public function actionuploadTopBanner() {
+        Yii::import("ext.EAjaxUpload.qqFileUploader");
+
+        $folder = 'images/banners/top/'; // folder for uploaded files
+        $allowedExtensions = array("jpg", "jpeg"); //array("jpg","jpeg","gif","exe","mov" and etc...
+        $sizeLimit = 10 * 1024 * 1024; // maximum file size in bytes
+        $uploader = new qqFileUploader($allowedExtensions, $sizeLimit);
+        $result = $uploader->handleUpload($folder);
+        Yii::app()->ih->load($result['filename'])->resize(728,90,false)->save();
+        $return = htmlspecialchars(json_encode($result), ENT_NOQUOTES);
+
+        //$fileSize = filesize($folder . $result['filename']); //GETTING FILE SIZE
+        //$fileName = $result['filename']; //GETTING FILE NAME
+
+        echo $return; // it's array
+    }
+    
+     public function actionuploadDownBanner() {
+        Yii::import("ext.EAjaxUpload.qqFileUploader");
+
+        $folder = 'images/banners/down/'; // folder for uploaded files
+        $allowedExtensions = array("jpg", "jpeg"); //array("jpg","jpeg","gif","exe","mov" and etc...
+        $sizeLimit = 10 * 1024 * 1024; // maximum file size in bytes
+        $uploader = new qqFileUploader($allowedExtensions, $sizeLimit);
+        $result = $uploader->handleUpload($folder);
+        Yii::app()->ih->load($result['filename'])->resize(728,90,false)->save();
+        $return = htmlspecialchars(json_encode($result), ENT_NOQUOTES);
+
+        //$fileSize = filesize($folder . $result['filename']); //GETTING FILE SIZE
+        //$fileName = $result['filename']; //GETTING FILE NAME
+
+        echo $return; // it's array
+    }
 }

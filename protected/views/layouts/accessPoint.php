@@ -10,9 +10,11 @@
             <title><?php echo CHtml::encode($this->pageTitle); ?></title>
     </head>
 
-    <body style ="background: url(back.jpg) 50% 0 no-repeat; background-color: <?php echo $this->styles['bodycolor']; ?>" > 
+    <body style ="background: url(<?php echo $this->startPageStyle['bg_image'];?> ) 50% 0 no-repeat; 
+                background-color: #<?php echo $this->startPageStyle['bg_color']; ?>" > 
 
-        <div class="wrapper content-border" style="margin-top: 210px;"> 
+        <div class="wrapper content-border" 
+             style="margin-top: <?php echo $this->startPageStyle['content_margin_top'];?>px;"> 
             <div class="navbar">
                 <div class="navbar-inner">
                     <a class="brand" href="#">Wi-Fi</a>
@@ -25,7 +27,9 @@
                 </div>
             </div>
             <div class="banner">
-                <img src ="banner1.jpg" >
+                <a href="<?php echo $this->startPageStyle['url_top_banner'];?>">
+                        <img src ="<?php echo $this->startPageStyle['top_banner'];?>" class="content-border">
+                </a>
             </div>
             <div class="content">
                 <div class="column content-border">
@@ -71,7 +75,28 @@
                 <div class="separator"></div>
                 <div class="column">
                     <h4>Информация для Вас:</h4>
-                    <table><tbody><tr class="head"><td colspan="2">сегодня</td><td colspan="2"></td></tr><tr><th><a href="http://news.yandex.ru/quotes/1.html" title="Динамика курса USD&nbsp;ЦБ">USD&nbsp;ЦБ</a></th><td><strong class="">31,4962</strong></td><td></td><td><strong></strong></td></tr><tr><th><a href="http://news.yandex.ru/quotes/23.html" title="Динамика курса EUR&nbsp;ЦБ">EUR&nbsp;ЦБ</a></th><td><strong class="">40,2238</strong></td><td></td><td><strong></strong></td></tr><tr class="s"><td colspan="4"></td></tr></tbody></table>
+                    <table>
+                        <tbody>
+                            <tr class="head">
+                                <td colspan="2"><i>Cегодня:</i></td>
+                               
+                            </tr>
+                            <tr>
+                                <th>
+                                    <a href="http://news.yandex.ru/quotes/1.html" title="Динамика курса USD&nbsp;ЦБ">USD&nbsp;ЦБ</a></th>
+                                <td>
+                                    <strong class=""><?php echo $this->startPageContent['usd'];?></strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><a href="http://news.yandex.ru/quotes/23.html" title="Динамика курса EUR&nbsp;ЦБ">EUR&nbsp;ЦБ</a></th>
+                                <td>
+                                    <strong class=""><?php echo $this->startPageContent['euro'];?></strong>
+                                </td>
+                               
+                            </tr>
+                            </tbody>
+                    </table>
                 </div>
 
             </div>
@@ -81,9 +106,12 @@
                     <button type="button" class="btn btn-info">Продолжить</button>
                 </h4>
             </div>
-            <div class="banner">
-                <img src ="banner2.jpg" >
+             <div class="banner">
+              <a href="<?php echo $this->startPageStyle['url_down_banner'];?>">
+                    <img src ="<?php echo $this->startPageStyle['down_banner'];?>" class="content-border">
+              </a>
             </div>
+           
             <div class="footer">
                 © 2012–2013&nbsp;&nbsp;<a href="http://wi-fun.ru">Wi-FI</a>
                 <span class="cenz">16+</span> 

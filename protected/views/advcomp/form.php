@@ -1,13 +1,16 @@
 <?php /** @var BootActiveForm $form */
 $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-    'id'=>'verticalForm',
+    'id'=>'horizontalForm',
+    'type'=>'horizontal',
     //'htmlOptions'=>array('class'=>'well'),
 )); ?>
  
 
 <div class="clearfix">
+    <?php echo $form->textFieldRow($model, 'name', 
+            array('class'=>'span5')); ?> 
     <?php
-        $this->renderPartial("chosePoint", array(
+        $this->renderPartial("formParts/chosePoint", array(
             'model' => $model,
             //'dataProvider' => $dataProvider,
             'all' => $all,
@@ -30,6 +33,8 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     ?>
 <hr>
 
-<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'Login')); ?>
+<?php 
+$text = ($model->isNewRecord)? "Перейти к оплате" : "Сохранить";
+$this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>$text)); ?>
  
 <?php $this->endWidget(); ?>

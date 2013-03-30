@@ -44,6 +44,12 @@
  */
 class Node extends CActiveRecord {
 
+    public static $DEF_BG_IMAGE = "images/nobrand.jpg";
+    public static $DEF_BG_COLOR = "d5d5d5";
+    public static $DEF_MARGIN_TOP = "200";
+    public static $DEF_BANNER = "images/defbanner.png";
+    public static $DEF_THEME = "standart";
+    public static $DEF_PATH = "site/about";
     /**
      * Returns the static model of the specified AR class.
      * @param string $className active record class name.
@@ -193,7 +199,19 @@ class Node extends CActiveRecord {
         return true;
     }
 
-    public function getTags($post) {
+    public function getTags()
+    {
+        $tags = $this->nodeTags;
+        $res = array ();
+        foreach ( $tags as $t)
+        {
+            $res[] = $t->tag_id;
+        }
+        return $res;
+    }
+
+
+    public function getTagsForCreate($post) {
         $tags = Tag::model()->findAll();
         $res = "";
         if ($this->isNewRecord) {
@@ -231,5 +249,4 @@ class Node extends CActiveRecord {
         }
         return $res;
     }
-
 }

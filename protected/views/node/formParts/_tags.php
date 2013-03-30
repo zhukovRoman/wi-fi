@@ -1,6 +1,6 @@
 <?php Yii::app()->getClientScript()->registerCssFile(Yii::app()->request->baseUrl . '/css/multiselect/multi-select.css'); ?>
 <select multiple="multiple" id="tags" name="tags[]">
-    <?php echo $model->getTags($_POST['tags']); ?>
+    <?php echo $model->getTagsForCreate($_POST['tags']); ?>
 </select>
 <a href='#' id='deselect-all'>Убрать все</a>
 

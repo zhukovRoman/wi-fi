@@ -149,7 +149,10 @@ class qqFileUploader {
                 $filename .= rand(10, 99);
             }
         }
-        $filename = $uploadDirectory . $filename . '.' . $ext;
+        
+       //$filename = ;
+        
+        $filename = $uploadDirectory . md5($filename.date("Ymdhis").rand(0,999)) . '.' . $ext;
         if ($this->file->save($filename)) {
             return array('success' => true, 'filename' => $filename);
         } else {

@@ -32,7 +32,7 @@ class AccountController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update', 'companyList'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -117,7 +117,29 @@ class AccountController extends Controller
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
-	/**
+        public function actionCompanyList()
+        {
+            $user_id = Yii::app()->user->getId();
+            $criteria = new CDbCriteria;
+            $criteria->addCondition('status=1', "OR");
+            $criteria->addCondition("status=5");
+            $criteria->condition = "t.owner=:user";
+            
+            $criteria->params = array(':user' => $user_id);
+            //$criteria->with = array('node');
+
+            $dataProvider = new CActiveDataProvider("advcomp", array(
+                        'criteria' => $criteria,
+                        //'sort' => $sort,
+                        'pagination' => array(
+                            'pageSize' => 20,
+                        ),
+                    ));
+
+            $this->render("CompanyTable", array ("dp" => $dataProvider));
+        }
+
+        /**
 	 * Lists all models.
 	 */
 	public function actionIndex()

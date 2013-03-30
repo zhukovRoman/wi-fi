@@ -1,18 +1,22 @@
 <?php
 
+Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
+Yii::setPathOfAlias('editable', dirname(__FILE__).'/../extensions/x-editable');
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
-    'name' => 'My Web Application',
+    'name' => 'Wi-ad',
     // preloading 'log' component
     'preload' => array('log', 'bootstrap',),
     // autoloading model and component classes
+    'theme' => 'bootstrap', 
     'import' => array(
         'application.models.*',
         'application.components.*',
+        'editable.*',
     ),
     'modules' => array(
         // uncomment the following to enable the Gii tool
@@ -40,8 +44,16 @@ return array(
             'allowAutoLogin' => true,
         ),
         'bootstrap' => array(
-            'class' => 'ext.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
+           'class'=>'bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
         ),
+        'editable' => array(
+            'class'     => 'editable.EditableConfig',
+            'form'      => 'bootstrap',        //form style: 'bootstrap', 'jqueryui', 'plain' 
+            'mode'      => 'popup',            //mode: 'popup' or 'inline'  
+            'defaults'  => array(              //default settings for all editable elements
+               'emptytext' => 'Click to edit'
+            )
+        ),        
         // uncomment the following to enable URLs in path-format
         /*
           'urlManager'=>array(
@@ -53,9 +65,9 @@ return array(
           ),
           ),
          */
-		'db'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/base.db',
-		),
+        'db'=>array(
+                'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/base.db',
+        ),
         // uncomment the following to use a MySQL database
 
 //        'db' => array(
