@@ -157,12 +157,12 @@ class NodeController extends Controller {
         
     public function actionGetStartPage($id)
     {
+        
         $this->layout="accessPoint";
         //$params['style'] = $this->getViewParams($id);
         //$params['content'] = $this->getContent($id);
         $this->startPageContent = $this->getContent($id);
         $this->startPageStyle = $this->setDeffParams($this->getViewParams($id));
-        
         $this->render('startPage',$params);
     }
     protected function setDeffParams($style)

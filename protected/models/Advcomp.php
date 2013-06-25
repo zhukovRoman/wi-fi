@@ -170,7 +170,7 @@ class Advcomp extends CActiveRecord {
     {
         $stat = array();
         $stat[] = array('Year', 'Показы');
-        $allShows = Statistic::model()->findAll("company_id=$this->id AND time >= date('now', '-7 days')");
+        $allShows = Statistic::model()->findAll("company_id=$this->id AND time >= date('now', '-7 days') order by time");
         $tmp = array();
         foreach ($allShows as $statRecord)
         {

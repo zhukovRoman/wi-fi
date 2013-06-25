@@ -3853,3 +3853,180 @@ REQUEST_URI=/index.php?r=advcomp/companypage&id=4
 in Z:\home\wi-fi\www\protected\models\Advcomp.php (178)
 in Z:\home\wi-fi\www\protected\views\advcomp\chart.php (25)
 in Z:\home\wi-fi\www\protected\views\advcomp\view.php (4)
+2013/03/30 13:16:54 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in Z:\home\wi-fi\www\yii\framework\web\CController.php:337
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('getStartPage')
+#9 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/getStartPa...')
+#10 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=node/getStartPage
+---
+2013/03/30 13:20:07 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in Z:\home\wi-fi\www\yii\framework\web\CController.php:337
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('getStartPage')
+#9 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/getStartPa...')
+#10 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=node/getStartPage&id=3?mac=4333
+---
+2013/03/30 13:20:10 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in Z:\home\wi-fi\www\yii\framework\web\CController.php:337
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('getStartPage')
+#9 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/getStartPa...')
+#10 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=node/getStartPage&id=3?mac=4333
+---
+2013/03/30 13:22:06 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in Z:\home\wi-fi\www\yii\framework\web\CController.php:337
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('getStartPage')
+#9 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/getStartPa...')
+#10 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=node/getStartPage&id=3
+---
+2013/03/30 13:50:02 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT * FROM 'content' 't' WHERE city_id=
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (148)
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (164)
+in Z:\home\wi-fi\www\index.php (13)
+2013/03/30 13:50:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "=": syntax error. The SQL statement executed was: SELECT * FROM 'content' 't' WHERE city_id=.
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (148)
+in Z:\home\wi-fi\www\protected\controllers\NodeController.php (164)
+in Z:\home\wi-fi\www\index.php (13)
+2013/03/30 13:50:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "=": syntax error. The SQL statement executed was: SELECT * FROM 'content' 't' WHERE city_id=' in Z:\home\wi-fi\www\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryAll()
+#2 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(1410): CActiveRecord->query(Object(CDbCriteria), true)
+#3 Z:\home\wi-fi\www\protected\controllers\NodeController.php(148): CActiveRecord->findAll('city_id=')
+#4 Z:\home\wi-fi\www\protected\controllers\NodeController.php(164): NodeController->getContent('')
+#5 [internal function]: NodeController->actionGetStartPage('')
+#6 Z:\home\wi-fi\www\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(NodeController), Array)
+#7 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(NodeController), Object(ReflectionMethod), Array)
+#8 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#15 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('getStartPage')
+#17 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/getStartPa...')
+#18 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php?r=node/getStartPage&id=
+---
+2013/03/30 13:50:07 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in Z:\home\wi-fi\www\yii\framework\web\CController.php:337
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('getStartPage')
+#9 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('node/getStartPa...')
+#10 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=node/getStartPage
+---
+2013/05/25 11:54:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in Z:\home\wi-fi\www\protected\controllers\AdvcompController.php:324
+Stack trace:
+#0 Z:\home\wi-fi\www\protected\controllers\AdvcompController.php(55): AdvcompController->loadModel('1')
+#1 [internal function]: AdvcompController->actionCompanypage('1')
+#2 Z:\home\wi-fi\www\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AdvcompController), Array)
+#3 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AdvcompController), Object(ReflectionMethod), Array)
+#4 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('companypage')
+#13 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('advcomp/company...')
+#14 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=advcomp/companypage&id=1
+---
+2013/05/25 12:10:39 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 25 bind or column index out of range. The SQL statement executed was: SELECT * FROM 'statistic' 't' WHERE company_id=7 AND time >= date('now', '-7 days').
+in Z:\home\wi-fi\www\protected\models\Advcomp.php (173)
+in Z:\home\wi-fi\www\protected\views\advcomp\chart.php (6)
+in Z:\home\wi-fi\www\protected\views\advcomp\view.php (4)
+2013/05/25 12:10:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 25 bind or column index out of range. The SQL statement executed was: SELECT * FROM 'statistic' 't' WHERE company_id=7 AND time >= date('now', '-7 days')' in Z:\home\wi-fi\www\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 Z:\home\wi-fi\www\yii\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryAll()
+#2 Z:\home\wi-fi\www\yii\framework\db\ar\CActiveRecord.php(1410): CActiveRecord->query(Object(CDbCriteria), true)
+#3 Z:\home\wi-fi\www\protected\models\Advcomp.php(173): CActiveRecord->findAll('company_id=7 AN...', 'order by time')
+#4 Z:\home\wi-fi\www\protected\views\advcomp\chart.php(6): Advcomp->getChartData()
+#5 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require('Z:\home\wi-fi\w...')
+#6 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\wi-fi\w...', Array, true)
+#7 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\wi-fi\w...', Array, true)
+#8 Z:\home\wi-fi\www\protected\views\advcomp\view.php(4): CController->renderPartial('chart', Array)
+#9 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(127): require('Z:\home\wi-fi\w...')
+#10 Z:\home\wi-fi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\wi-fi\w...', Array, true)
+#11 Z:\home\wi-fi\www\yii\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\wi-fi\w...', Array, true)
+#12 Z:\home\wi-fi\www\yii\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#13 Z:\home\wi-fi\www\protected\controllers\AdvcompController.php(58): CController->render('view', Array)
+#14 [internal function]: AdvcompController->actionCompanypage('7')
+#15 Z:\home\wi-fi\www\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AdvcompController), Array)
+#16 Z:\home\wi-fi\www\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AdvcompController), Object(ReflectionMethod), Array)
+#17 Z:\home\wi-fi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 Z:\home\wi-fi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 Z:\home\wi-fi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 Z:\home\wi-fi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 Z:\home\wi-fi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 Z:\home\wi-fi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#24 Z:\home\wi-fi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(283): CController->run('companypage')
+#26 Z:\home\wi-fi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('advcomp/company...')
+#27 Z:\home\wi-fi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 Z:\home\wi-fi\www\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/index.php?r=advcomp/companypage&id=7
+---
